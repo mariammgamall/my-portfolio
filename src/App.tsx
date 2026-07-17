@@ -55,11 +55,11 @@ function App() {
         
         <div className="space-y-12">
           <About />
+          <Education />
           <Skills />
           <Projects />
           <Experience />
           <Certifications />
-          <Education />
           <Contact />
         </div>
       </main>

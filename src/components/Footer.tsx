@@ -6,11 +6,11 @@ export default function Footer({ scrollToSection }: FooterProps) {
   const links = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
+    { name: 'Education', id: 'education' },
     { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
     { name: 'Experience', id: 'experience' },
     { name: 'Certifications', id: 'certifications' },
-    { name: 'Education', id: 'education' },
     { name: 'Contact', id: 'contact' },
   ];
 
