@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaAward, FaEye, FaDownload, FaTimes } from 'react-icons/fa';
+import { FaAward, FaEye, FaTimes } from 'react-icons/fa';
 
 export default function Certifications() {
   const [activeCertUrl, setActiveCertUrl] = useState<string | null>(null);
@@ -81,22 +81,14 @@ export default function Certifications() {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-3 mt-auto">
+              <div className="flex items-center mt-auto w-full">
                 <button
                   onClick={() => openCertModal(encodeURI(cert.file), cert.title)}
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-slate-800 dark:text-white transition-all hover:scale-[1.02]"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-slate-800 dark:text-white transition-all hover:scale-[1.01] cursor-pointer"
                 >
                   <FaEye size={14} />
-                  View
+                  View Certificate
                 </button>
-                <a
-                  href={encodeURI(cert.file)}
-                  download
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold bg-gradient-to-r from-accent-indigo to-accent-purple hover:opacity-90 text-white transition-all hover:scale-[1.02] text-center"
-                >
-                  <FaDownload size={12} />
-                  Download
-                </a>
               </div>
             </motion.div>
           ))}
