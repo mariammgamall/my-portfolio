@@ -5,6 +5,7 @@ A modern, professional, and visually striking personal portfolio website for **M
 ---
 
 ## 🚀 Live Demo & Repository
+- **Live Demo URL**: [mariam-gamal-portfolio.vercel.app](https://mariam-gamal-portfolio.vercel.app/)
 - **GitHub Repository**: [github.com/mariammgamall/my-portfolio](https://github.com/mariammgamall/my-portfolio)
 - **LinkedIn Profile**: [linkedin.com/in/mariam-gamal-3b2408281](https://linkedin.com/in/mariam-gamal-3b2408281)
 - **Primary Contact**: [maryamgamal188@gmail.com](mailto:maryamgamal188@gmail.com)
