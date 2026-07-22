@@ -10,7 +10,7 @@ export const translations = {
       certifications: "Certifications",
       contact: "Contact",
       resume: "Resume",
-      langToggle: "عربي"
+      langToggle: "العربية"
     },
     hero: {
       badge: "Available for Job Opportunities, Internships ,and Projects",

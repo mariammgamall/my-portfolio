@@ -84,12 +84,12 @@ export default function Projects() {
               onClick={() => openProjectDetails(project)}
               className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer"
             >
-              {/* Card image header */}
-              <div className="w-full h-48 relative overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center">
+              {/* Card image header - Full Image Display with Aspect Ratio */}
+              <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center p-2">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded"
                   loading="lazy"
                 />
               </div>
@@ -150,7 +150,7 @@ export default function Projects() {
       {/* All Projects Page Modal (z-[100] above fixed navbar) */}
       <AnimatePresence>
         {showAllModal && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 pt-20 md:pt-24">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 md:p-8 pt-16 sm:pt-20">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -169,25 +169,26 @@ export default function Projects() {
               className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
             >
               {/* Modal Header */}
-              <div className="flex justify-between items-center px-6 md:px-8 py-5 border-b border-slate-100 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal">
+              <div className="flex justify-between items-center px-5 md:px-8 py-4 md:py-5 border-b border-slate-100 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm gap-3">
+                <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <div className="p-2.5 rounded-xl bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal flex-shrink-0">
                     <FaLayerGroup size={18} />
                   </div>
-                  <h3 className="font-display font-extrabold text-xl md:text-2xl text-slate-900 dark:text-white">
+                  <h3 className="font-display font-extrabold text-lg md:text-2xl text-slate-900 dark:text-white truncate">
                     {t.projects.allModalTitle}
                   </h3>
                 </div>
                 <button
                   onClick={closeAllProjectsModal}
-                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                  className="flex-shrink-0 p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                  aria-label="Close"
                 >
                   <FaTimes size={18} />
                 </button>
               </div>
 
               {/* Modal Content / All Projects Grid */}
-              <div className="flex-1 overflow-y-auto p-6 md:p-8 bg-slate-50/50 dark:bg-slate-950/50">
+              <div className="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50/50 dark:bg-slate-950/50">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   {projects.map((project) => (
                     <div
@@ -195,14 +196,14 @@ export default function Projects() {
                       onClick={() => openProjectDetails(project)}
                       className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
                     >
-                      <div className="w-full h-44 relative overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center">
+                      <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center p-2">
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded"
                         />
                       </div>
-                      <div className="p-6 flex flex-col flex-1">
+                      <div className="p-5 md:p-6 flex flex-col flex-1">
                         <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 self-start mb-3">
                           {project.year}
                         </span>
@@ -241,7 +242,7 @@ export default function Projects() {
       {/* Project Details Modal / Tab (z-[110] above all) */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-8 pt-20 md:pt-24 overflow-hidden">
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-6 pt-16 sm:pt-20 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -257,40 +258,41 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="relative w-full max-w-3xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
+              className="relative w-full max-w-3xl max-h-[88vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
             >
-              {/* Modal Header */}
-              <div className="flex justify-between items-center px-6 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+              {/* Modal Header - Fixed Mobile View so Title & X Button are 100% visible */}
+              <div className="flex justify-between items-start gap-3 px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 min-w-0 flex-1">
+                  <span className="w-fit text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
                     {selectedProject.year}
                   </span>
-                  <h3 className="font-display font-bold text-base md:text-lg text-slate-900 dark:text-white truncate max-w-xs md:max-w-md">
+                  <h3 className="font-display font-bold text-sm sm:text-base md:text-lg text-slate-900 dark:text-white leading-snug break-words">
                     {selectedProject.title}
                   </h3>
                 </div>
                 <button
                   onClick={closeProjectDetails}
-                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                  className="flex-shrink-0 p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                  aria-label="Close"
                 >
-                  <FaTimes size={16} />
+                  <FaTimes size={18} />
                 </button>
               </div>
 
               {/* Modal Body */}
-              <div className="flex-1 overflow-y-auto p-6 md:p-8 space-y-6 text-start">
-                {/* Project Cover Image */}
-                <div className="w-full h-56 md:h-72 rounded-2xl overflow-hidden bg-slate-950 border border-slate-200/50 dark:border-slate-800 flex items-center justify-center">
+              <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-6 text-start">
+                {/* Project Cover Image - Full Aspect Display */}
+                <div className="w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-slate-950 border border-slate-200/50 dark:border-slate-800 flex items-center justify-center p-2 sm:p-4">
                   <img 
                     src={selectedProject.image} 
                     alt={selectedProject.title} 
-                    className="w-full h-full object-cover"
+                    className="max-w-full max-h-full object-contain rounded-lg shadow-md"
                   />
                 </div>
 
                 {/* Title */}
                 <div>
-                  <h2 className="font-display font-extrabold text-2xl md:text-3xl text-slate-900 dark:text-white mb-2">
+                  <h2 className="font-display font-extrabold text-xl md:text-3xl text-slate-900 dark:text-white mb-2">
                     {selectedProject.title}
                   </h2>
                 </div>
@@ -304,7 +306,7 @@ export default function Projects() {
                     {selectedProject.tech.map((tItem, tIdx) => (
                       <span 
                         key={tIdx}
-                        className="text-xs px-3 py-1 font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-slate-700/50"
+                        className="text-xs px-3 py-1 font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-350 border border-slate-200/50 dark:border-slate-700/50"
                       >
                         {tItem}
                       </span>
