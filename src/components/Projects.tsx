@@ -82,14 +82,14 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               whileHover={{ y: -8 }}
               onClick={() => openProjectDetails(project)}
-              className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer"
+              className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer bg-white dark:bg-slate-900"
             >
-              {/* Card image header - Full Image Display with Aspect Ratio */}
-              <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center p-2">
+              {/* Card image header - Theme aware backdrop matching Light & Dark modes */}
+              <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-b border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-2.5 sm:p-3.5">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg shadow-md border border-slate-200/60 dark:border-slate-800/50"
                   loading="lazy"
                 />
               </div>
@@ -196,11 +196,11 @@ export default function Projects() {
                       onClick={() => openProjectDetails(project)}
                       className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
                     >
-                      <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center p-2">
+                      <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-b border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-2.5 sm:p-3.5">
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg shadow-md border border-slate-200/60 dark:border-slate-800/50"
                         />
                       </div>
                       <div className="p-5 md:p-6 flex flex-col flex-1">
@@ -260,7 +260,7 @@ export default function Projects() {
               transition={{ type: 'spring', duration: 0.5 }}
               className="relative w-full max-w-3xl max-h-[88vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
             >
-              {/* Modal Header - Fixed Mobile View so Title & X Button are 100% visible */}
+              {/* Modal Header */}
               <div className="flex justify-between items-start gap-3 px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 min-w-0 flex-1">
                   <span className="w-fit text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
@@ -281,12 +281,12 @@ export default function Projects() {
 
               {/* Modal Body */}
               <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-6 text-start">
-                {/* Project Cover Image - Full Aspect Display */}
-                <div className="w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-slate-950 border border-slate-200/50 dark:border-slate-800 flex items-center justify-center p-2 sm:p-4">
+                {/* Project Cover Image - Theme-aware Backdrop Display */}
+                <div className="w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-3 sm:p-5">
                   <img 
                     src={selectedProject.image} 
                     alt={selectedProject.title} 
-                    className="max-w-full max-h-full object-contain rounded-lg shadow-md"
+                    className="max-w-full max-h-full object-contain rounded-lg shadow-lg border border-slate-200/60 dark:border-slate-800/50"
                   />
                 </div>
 
