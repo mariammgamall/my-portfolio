@@ -21,14 +21,33 @@ export default function Contact() {
       setErrorMsg(t.contact.errorFill);
       return;
     }
-    setErrorMsg('');
-    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/maryamgamal188@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          _subject: `New Portfolio Message from ${formState.name}`,
+          _template: "table"
+        })
+      });
 
-    setTimeout(() => {
+      if (response.ok) {
+        setIsSubmitting(false);
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (err) {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
-    }, 1500);
+      setErrorMsg('Failed to send message. Please try again or email directly to maryamgamal188@gmail.com');
+    }
   };
 
   return (
