@@ -1,6 +1,6 @@
 # Mariam Gamal - Personal Portfolio Website
 
-A modern, professional, and visually striking personal portfolio website for **Mariam Gamal**, a Computer Science Engineering student specializing in Full-Stack Web Development and Applied AI. Built using a sleek, dark-themed tech/AI aesthetic, featuring glassmorphism layouts and performant micro-animations.
+A modern, professional, and visually striking personal portfolio website for **Mariam Gamal**, a Computer Science Engineering student specializing in Full-Stack Web Development and Applied AI. Built using a sleek dark/light tech aesthetic, featuring glassmorphism layouts, full Arabic/English bilingual support (RTL/LTR), performant micro-animations, and direct live contact form integration.
 
 ---
 
@@ -15,8 +15,10 @@ A modern, professional, and visually striking personal portfolio website for **M
 ## 🛠️ Tech Stack & Key Tools
 - **Core Framework**: [React.js](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (powered by [Vite](https://vite.dev/))
 - **Styles**: [Tailwind CSS v4](https://tailwindcss.com/) (using native PostCSS + `@theme` CSS configuration)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) (scroll reveals, custom transitions, typewriter tags)
+- **Internationalization (i18n)**: Custom React `LanguageContext` supporting full Arabic (RTL) & English (LTR) switching with local storage persistence and Google's [Cairo](https://fonts.google.com/specimen/Cairo) font
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) (scroll reveals, page modals, interactive card transitions, typewriter effects)
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Live Contact Delivery**: [FormSubmit API](https://formsubmit.co/) sending live messages directly to `maryamgamal188@gmail.com`
 - **Build / Packaging**: Vite Bundler (producing highly optimized client static chunks)
 
 ---
@@ -24,28 +26,37 @@ A modern, professional, and visually striking personal portfolio website for **M
 ## ✨ Features & Architecture
 
 1. **Hero / Landing**:
-   - Particle Network Background: Renders a reactive canvas-based nodes network connecting dynamically.
-   - Tagline Typewriter: Custom state cycles through roles: *Full-Stack Developer*, *AI Engineer*, and *RAG Systems Builder*.
-   - Glow Profile Border: A customized circular tech-glow crop highlighting the professional avatar.
+   - **Particle Network Background**: Renders a reactive canvas-based nodes network connecting dynamically.
+   - **Typewriter Effect**: Cycles through technical roles (*Full-Stack Developer*, *AI Engineer*, *RAG Systems Builder* / *مطورة فول ستاك*, *مهندسة ذكاء اصطناعي*, *مبتكرة أنظمة RAG*).
+   - **Availability Tagline**: Prominently displays *"Available for Job Opportunities, Internships ,and Projects"* / *"متاحة لفرص العمل، التدريب، والمشاريع"*.
+   - **Profile Glow Avatar**: A customized circular tech-glow crop highlighting the professional profile image.
 
-2. **About Section**:
-   - Incorporates academic & developer biographies.
-   - Features animated count-up stat digits (study terms, completed projects, internships) triggered on viewport intersection.
+2. **Full Arabic / English Bilingual Support (RTL/LTR)**:
+   - Header button **`العربية` / `English`** toggles complete website translation instantly.
+   - Automatically handles `dir="rtl"` vs `dir="ltr"`, font family overrides, and element alignment across all components.
 
-3. **Technical Skills Grid**:
-   - Organizes expertise into 5 core cards (Languages, Web/Frameworks, Databases, AI/ML, and Tools) with hover glowing states and interactive tech badges.
+3. **About Section**:
+   - Incorporates academic & engineering biographies.
+   - Features animated count-up stat counters (E-JUST study years, completed projects, internships, technical skills).
 
-4. **Featured Projects**:
-   - Features rich glassmorphic cards with custom CSS visual mockups for a monorepo LMS, a Flask customer ordering platform, and a similarity search node diagram representing an AI RAG reasoning engine.
+4. **Education & Technical Skills**:
+   - Organizes education history (E-JUST B.Sc. & El Zahraa Diploma) and technical skills into 5 category cards (Languages, Web/Frameworks, Databases, AI/ML, and Tools) with hover glowing states and interactive tech badges.
 
-5. **Animated Experience Timeline**:
-   - Vertical timeline mapping internships (Decode Labs, Tips Hindawi, DEPI, Route, etc.) using slide-up entrance animations.
+5. **Featured Projects (Top 3 Limit + All Projects Modal)**:
+   - Displays 3 featured projects on the main landing grid (Full-Stack LMS Monorepo, Aura Customer Ordering System, and AI Knowledge & Reasoning Engine).
+   - **Project Details Tab/Modal**: Clicking any project card opens an interactive detail modal with full-resolution screenshots, complete tech stack badges, comprehensive project overview, and a **Live Demo** button.
+   - **View All Projects Button**: Opens a full-page modal overlay displaying the entire portfolio showcase.
 
-6. **Interactive Certifications**:
-   - Contains certificate cards. Clicking **View** opens an overlay modal with an embedded PDF preview `iframe` directly in the site, eliminating disruptive browser redirects. Clicking **Download** triggers direct downloads.
+6. **Animated Experience Timeline**:
+   - Vertical timeline mapping professional internships (DEPI, Route Academy, Decode Labs, Tips Hindawi, SASEC, AMOC) with slide-up entrance animations.
 
-7. **Contact Platform**:
-   - Input focus states utilizing Tailwind glow effects, coupled with an interactive submission form and visual validation checkmark screens.
+7. **Certifications (Mobile PDF Preview Fix + All Certificates Modal)**:
+   - Displays top 3 certificates on the main landing section with a **View All Certificates** button to open the full collection.
+   - High-resolution converted PNG image previews ensuring 100% native mobile rendering on Android Chrome & iOS Safari without iframe cutoffs.
+   - Includes an optional *"Open Original PDF"* link inside the viewer modal for original document downloads.
+
+8. **Live Contact Form**:
+   - Fully activated contact form using FormSubmit API that transmits visitor messages directly to `maryamgamal188@gmail.com` with real-time submission feedback.
 
 ---
 
@@ -58,8 +69,8 @@ Make sure you have [Node.js](https://nodejs.org/) installed (version 18+ is reco
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/mariammgamall/mariam-gamal-portfolio.git
-cd mariam-gamal-portfolio
+git clone https://github.com/mariammgamall/my-portfolio.git
+cd my-portfolio
 ```
 
 ### 2. Install Dependencies
@@ -68,22 +79,21 @@ npm install
 ```
 
 ### 3. Start the Development Server
-- **To run locally on your laptop only:**
+- **To run locally on your computer:**
   ```bash
   npm run dev
   ```
-- **To run on both your laptop and mobile phone (local network):**
+- **To run on both your computer and mobile phone (local network):**
   ```bash
   npm run dev -- --host
   ```
-Open the local URL (`http://localhost:5173/`) on your laptop, or the network IP URL on your mobile phone (ensure both devices are on the same Wi-Fi network).
+Open the local URL (`http://localhost:5173/`) in your browser.
 
 ### 4. Build for Production
-To generate a static build optimized for fast loading and deployment (e.g., on Vercel, Netlify, or GitHub Pages):
+To generate an optimized production bundle:
 ```bash
 npm run build
 ```
-This compiles your typescript, optimization pipelines, and outputs a highly performant deployment-ready bundle in the `/dist` directory.
 
 ### 5. Preview the Production Build
 To preview the production bundle locally:
@@ -97,29 +107,33 @@ npm run preview
 ```text
 mariam-gamal-portfolio/
 ├── public/                     # Static Assets
-│   ├── certificates/           # Real Certification PDF & Image files
+│   ├── certificates/           # PNG & PDF Certification files
 │   ├── images/                 
-│   │   ├── profile-image/      # Personal profile headshot (mariam.jpeg)
+│   │   ├── profile-image/      # Profile headshot (mariam.jpeg)
 │   │   └── projects-images/    # Screenshots for LMS, COS, and Smart-RAG
 │   ├── my resume/              # Personal curriculum vitae (mariam_gamal_cv.pdf)
 │   ├── favicon.svg             # Tab browser icon
 │   └── icons.svg               # SVG sprite mappings
 ├── src/
-│   ├── components/             # Modular Portfolio sections
-│   │   ├── Navbar.tsx
-│   │   ├── Hero.tsx
-│   │   ├── About.tsx
-│   │   ├── Skills.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Experience.tsx
-│   │   ├── Certifications.tsx
-│   │   ├── Education.tsx
-│   │   ├── Contact.tsx
-│   │   └── Footer.tsx
-│   ├── App.tsx                 # Theme and layout state coordinator
-│   ├── main.tsx                # React application entrypoint
-│   └── index.css               # Tailwind CSS v4 directives & theme configurations
-├── postcss.config.js           # PostCSS integrations
+│   ├── components/             # Portfolio UI Components
+│   │   ├── Navbar.tsx          # Navigation header & language/theme controls
+│   │   ├── Hero.tsx            # Particle canvas & typewriter banner
+│   │   ├── About.tsx           # Bio & animated statistics counters
+│   │   ├── Education.tsx       # Degree & school details
+│   │   ├── Skills.tsx          # Technical expertise categories
+│   │   ├── Projects.tsx        # Top 3 grid, project detail modal & view all modal
+│   │   ├── Experience.tsx      # Vertical internship timeline
+│   │   ├── Certifications.tsx  # Certificates preview modal & view all modal
+│   │   ├── Contact.tsx         # Contact info & FormSubmit live email form
+│   │   └── Footer.tsx          # Clean footer
+│   ├── context/
+│   │   └── LanguageContext.tsx # Bilingual state & RTL/LTR coordinator
+│   ├── data/
+│   │   └── translations.ts     # Complete English & Arabic translation dictionary
+│   ├── App.tsx                 # Root layout & dark mode state
+│   ├── main.tsx                # Application entrypoint
+│   └── index.css               # Tailwind CSS v4 directives & theme styles
+├── index.html                  # HTML template with Cairo & Inter Google Fonts
 ├── package.json                # Project configurations & dependencies
 └── tsconfig.json               # TypeScript configuration
 ```
