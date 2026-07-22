@@ -84,12 +84,12 @@ export default function Projects() {
               onClick={() => openProjectDetails(project)}
               className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer bg-white dark:bg-slate-900"
             >
-              {/* Card image header - Theme aware backdrop matching Light & Dark modes */}
-              <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-b border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-2.5 sm:p-3.5">
+              {/* Card image header - Edge-to-edge image cover without any background behind it */}
+              <div className="w-full h-48 sm:h-56 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg shadow-md border border-slate-200/60 dark:border-slate-800/50"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
@@ -196,11 +196,11 @@ export default function Projects() {
                       onClick={() => openProjectDetails(project)}
                       className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
                     >
-                      <div className="w-full aspect-[16/10] sm:aspect-[16/9] relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-b border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-2.5 sm:p-3.5">
+                      <div className="w-full h-48 sm:h-52 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg shadow-md border border-slate-200/60 dark:border-slate-800/50"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="p-5 md:p-6 flex flex-col flex-1">
@@ -281,12 +281,12 @@ export default function Projects() {
 
               {/* Modal Body */}
               <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-6 text-start">
-                {/* Project Cover Image - Theme-aware Backdrop Display */}
-                <div className="w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 via-slate-100/90 to-slate-200/80 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border border-slate-200/60 dark:border-slate-800 flex items-center justify-center p-3 sm:p-5">
+                {/* Project Cover Image - Edge to Edge Image Display */}
+                <div className="w-full h-56 sm:h-72 md:h-80 relative rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-lg">
                   <img 
                     src={selectedProject.image} 
                     alt={selectedProject.title} 
-                    className="max-w-full max-h-full object-contain rounded-lg shadow-lg border border-slate-200/60 dark:border-slate-800/50"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
 
