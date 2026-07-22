@@ -80,8 +80,21 @@
 
   /* Input fields */
   .glow-input {
-    @apply w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 rounded-xl outline-none focus:border-accent-indigo dark:focus:border-accent-teal focus:ring-2 focus:ring-accent-indigo/20 dark:focus:ring-accent-teal/20 transition-all duration-300;
+    @apply w-full px-4 py-3 bg-white/90 dark:bg-slate-900/80 border border-slate-300/80 dark:border-slate-800 rounded-xl outline-none text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-400 placeholder:opacity-100 focus:border-accent-indigo dark:focus:border-accent-teal focus:ring-2 focus:ring-accent-indigo/20 dark:focus:ring-accent-teal/20 transition-all duration-300;
   }
+}
+
+/* Custom placeholder visibility override */
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
 }
 
 /* Custom Scrollbar */
