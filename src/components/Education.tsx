@@ -1,29 +1,24 @@
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaSchool, FaBook } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Education() {
+  const { t } = useLanguage();
+
   const education = [
     {
-      institution: 'Egypt-Japan University of Science and Technology (E-JUST)',
-      degree: 'B.Sc. in Computer Science and Engineering',
-      period: '2024 - 2028',
+      institution: t.education.ejust.institution,
+      degree: t.education.ejust.degree,
+      period: t.education.ejust.period,
       icon: <FaGraduationCap className="text-accent-indigo" size={24} />,
-      details: [
-        'Specializing in Intelligent Systems and Software Engineering.',
-        'Rigorous engineering foundation in Data Structures, Advanced Algorithms, Object-Oriented Analysis, and Discrete Mathematics.',
-        'Extensive research and practice in Deep Learning, Applied Neural Networks, and NLP architectures.'
-      ]
+      details: t.education.ejust.details
     },
     {
-      institution: 'El Zahraa International Schools (American Department)',
-      degree: 'High School Diploma',
-      period: '2020 - 2023',
+      institution: t.education.zahraa.institution,
+      degree: t.education.zahraa.degree,
+      period: t.education.zahraa.period,
       icon: <FaSchool className="text-accent-teal" size={24} />,
-      details: [
-        'Graduated with an outstanding GPA of 3.98 / 4.00.',
-        'Active participant in scientific research exhibits, coding groups, and mathematics competitions.',
-        'Maintained high honors distinction across all academic terms.'
-      ]
+      details: t.education.zahraa.details
     }
   ];
 
@@ -42,7 +37,7 @@ export default function Education() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
           >
-            Education
+            {t.education.title}
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -53,7 +48,7 @@ export default function Education() {
           />
         </div>
 
-        {/* Education Timeline / Cards */}
+        {/* Education Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {education.map((edu, idx) => (
             <motion.div
@@ -62,11 +57,11 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="glass-card p-8 border-slate-200/50 dark:border-slate-800/40 flex flex-col h-full glass-card-hover"
+              className="glass-card p-8 border-slate-200/50 dark:border-slate-800/40 flex flex-col h-full glass-card-hover text-start"
             >
               {/* Institution and Period */}
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/40 dark:border-slate-800 text-slate-800 dark:text-white">
+                <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/40 dark:border-slate-800 text-slate-800 dark:text-white flex-shrink-0">
                   {edu.icon}
                 </div>
                 <div>
@@ -86,7 +81,7 @@ export default function Education() {
               <ul className="space-y-3.5 flex-1">
                 {edu.details.map((detail, dIdx) => (
                   <li key={dIdx} className="flex items-start gap-3">
-                    <FaBook className="text-slate-400 dark:text-slate-650 mt-1 flex-shrink-0" size={12} />
+                    <FaBook className="text-slate-400 dark:text-slate-600 mt-1 flex-shrink-0" size={12} />
                     <span className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
                       {detail}
                     </span>

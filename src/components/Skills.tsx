@@ -1,25 +1,28 @@
 import { motion } from 'framer-motion';
 import { FaCode, FaGlobe, FaDatabase, FaBrain, FaTools } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Skills() {
+  const { t } = useLanguage();
+
   const categories = [
     {
-      title: 'Languages',
+      title: t.skills.categories.languages,
       icon: <FaCode className="text-accent-indigo" size={24} />,
       skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C', 'HTML', 'CSS']
     },
     {
-      title: 'Web & Frameworks',
+      title: t.skills.categories.web,
       icon: <FaGlobe className="text-accent-blue" size={24} />,
       skills: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'Flask', 'Bootstrap', 'Tailwind CSS']
     },
     {
-      title: 'Databases & ORMs',
+      title: t.skills.categories.db,
       icon: <FaDatabase className="text-accent-teal" size={24} />,
       skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Prisma ORM']
     },
     {
-      title: 'AI & Machine Learning',
+      title: t.skills.categories.ai,
       icon: <FaBrain className="text-accent-purple" size={24} />,
       skills: [
         'PyTorch',
@@ -32,7 +35,7 @@ export default function Skills() {
       ]
     },
     {
-      title: 'Tools & Workflow',
+      title: t.skills.categories.tools,
       icon: <FaTools className="text-slate-500 dark:text-slate-400" size={24} />,
       skills: ['Git', 'GitHub', 'VS Code', 'REST API Design', 'MVC Architecture', 'Monorepos']
     }
@@ -68,7 +71,7 @@ export default function Skills() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
           >
-            Technical Expertise
+            {t.skills.title}
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -91,14 +94,14 @@ export default function Skills() {
             <motion.div
               key={catIdx}
               variants={cardVariants}
-              className="glass-card p-6 md:p-8 glass-card-hover border-slate-200/50 dark:border-slate-800/40 relative group overflow-hidden flex flex-col h-full"
+              className="glass-card p-6 md:p-8 glass-card-hover border-slate-200/50 dark:border-slate-800/40 relative group overflow-hidden flex flex-col h-full text-start"
             >
               {/* Decorative hover card glow */}
               <div className="absolute -inset-px bg-gradient-to-tr from-accent-indigo/10 via-transparent to-accent-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl -z-10" />
 
               {/* Title & Icon Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-205 dark:border-slate-800">
+                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex-shrink-0">
                   {cat.icon}
                 </div>
                 <h3 className="font-display font-bold text-lg md:text-xl text-slate-800 dark:text-white">

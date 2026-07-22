@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeroProps {
   scrollToSection: (id: string) => void;
@@ -8,48 +9,50 @@ interface HeroProps {
 
 export default function Hero({ scrollToSection }: HeroProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const { t, language } = useLanguage();
   
-  // Tagline cycling strings
-  const taglines = ["Full-Stack Developer", "AI Engineer", "RAG Systems Builder"];
+  const taglines = t.hero.taglines;
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
   const [taglineText, setTaglineText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(100);
 
+  // Reset tagline index when language switches
+  useEffect(() => {
+    setCurrentTaglineIndex(0);
+    setTaglineText("");
+    setIsDeleting(false);
+  }, [language]);
+
   // Typewriter effect
   useEffect(() => {
     let timer: number;
-    const currentFullText = taglines[currentTaglineIndex];
+    const currentFullText = taglines[currentTaglineIndex] || taglines[0];
 
     if (isDeleting) {
-      // Deleting text
       timer = window.setTimeout(() => {
         setTaglineText(prev => prev.slice(0, -1));
-        setTypingSpeed(40); // Faster delete
+        setTypingSpeed(40);
       }, typingSpeed);
     } else {
-      // Typing text
       timer = window.setTimeout(() => {
         setTaglineText(currentFullText.slice(0, taglineText.length + 1));
         setTypingSpeed(100);
       }, typingSpeed);
     }
 
-    // Check if word is fully typed
     if (!isDeleting && taglineText === currentFullText) {
-      // Pause before deleting
       timer = window.setTimeout(() => {
         setIsDeleting(true);
       }, 2000);
     } else if (isDeleting && taglineText === "") {
-      // Move to next word
       setIsDeleting(false);
       setCurrentTaglineIndex(prev => (prev + 1) % taglines.length);
-      setTypingSpeed(150); // Pause before next word
+      setTypingSpeed(150);
     }
 
     return () => clearTimeout(timer);
-  }, [taglineText, isDeleting, currentTaglineIndex]);
+  }, [taglineText, isDeleting, currentTaglineIndex, taglines]);
 
   // Particle background effect
   useEffect(() => {
@@ -92,22 +95,18 @@ export default function Hero({ scrollToSection }: HeroProps) {
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw links between nearby particles
       for (let i = 0; i < particles.length; i++) {
         const p1 = particles[i];
         
-        // Move particle
         p1.x += p1.speedX;
         p1.y += p1.speedY;
 
-        // Bounce on borders
         if (p1.x < 0 || p1.x > canvas.width) p1.speedX *= -1;
         if (p1.y < 0 || p1.y > canvas.height) p1.speedY *= -1;
 
-        // Draw particle dot
         ctx.beginPath();
         ctx.arc(p1.x, p1.y, p1.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${p1.opacity})`; // Indigo color with transparency
+        ctx.fillStyle = `rgba(99, 102, 241, ${p1.opacity})`;
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -148,34 +147,34 @@ export default function Hero({ scrollToSection }: HeroProps) {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10 w-full">
         {/* Left Side: Copy */}
-        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 md:space-y-8 order-2 lg:order-1">
+        <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-start space-y-6 md:space-y-8 order-2 lg:order-1">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-indigo/10 dark:bg-accent-indigo/20 border border-accent-indigo/20 dark:border-accent-indigo/35 text-xs md:text-sm font-semibold text-accent-indigo dark:text-indigo-300"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-indigo/10 dark:bg-accent-indigo/20 border border-accent-indigo/20 dark:border-accent-indigo/35 text-xs md:text-sm font-semibold text-accent-indigo dark:text-indigo-300"
           >
-            <span className="w-2 h-2 rounded-full bg-accent-indigo animate-ping"></span>
-            Available for Internships & Full-Stack / AI Opportunities
+            <span className="w-2 h-2 rounded-full bg-accent-indigo animate-ping flex-shrink-0"></span>
+            <span>{t.hero.badge}</span>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 w-full">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight"
             >
-              Hi, I'm <span className="bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal bg-clip-text text-transparent">Mariam Gamal</span>
+              {t.hero.greeting} <span className="bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal bg-clip-text text-transparent">{t.hero.name}</span>
             </motion.h1>
 
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-300"
+              className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-300"
             >
-              Computer Science Engineer | Software Engineering & AI
+              {t.hero.title}
             </motion.p>
             
             {/* Tagline Typewriter container */}
@@ -197,7 +196,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="max-w-xl text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed"
           >
-            Specializing in Full-Stack Web Development & Applied Artificial Intelligence. Building performant monorepo ecosystems and low-latency RAG systems.
+            {t.hero.bio}
           </motion.p>
 
           {/* CTAs */}
@@ -211,7 +210,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
               onClick={() => scrollToSection('projects')}
               className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-accent-indigo to-accent-purple hover:from-accent-indigo/90 hover:to-accent-purple/90 text-white font-semibold shadow-lg hover:shadow-accent-indigo/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base cursor-pointer"
             >
-              View Projects
+              {t.hero.btnProjects}
             </button>
             <a
               href="/my resume/mariam_gamal_cv.pdf"
@@ -219,13 +218,13 @@ export default function Hero({ scrollToSection }: HeroProps) {
               rel="noreferrer"
               className="px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-slate-800 dark:text-white font-semibold hover:scale-105 active:scale-95 transition-all text-sm md:text-base border border-transparent dark:border-slate-700/50 flex items-center justify-center"
             >
-              View Resume
+              {t.hero.btnResume}
             </a>
             <button
               onClick={() => scrollToSection('contact')}
               className="px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900/50 text-slate-800 dark:text-white font-semibold hover:scale-105 active:scale-95 transition-all text-sm md:text-base cursor-pointer"
             >
-              Contact Me
+              {t.hero.btnContact}
             </button>
           </motion.div>
 
@@ -234,7 +233,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex items-center space-x-5"
+            className="flex items-center space-x-4 rtl:space-x-reverse"
           >
             <a 
               href="https://github.com/mariammgamall" 
@@ -270,15 +269,12 @@ export default function Hero({ scrollToSection }: HeroProps) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.2 }}
-            className="relative w-64 h-64 md:w-80 md:h-80 select-none cursor-grab active:cursor-grabbing"
+            className="relative w-64 h-64 md:w-80 md:h-80 select-none"
             whileHover={{ scale: 1.03 }}
           >
-            {/* Ambient background glows */}
             <div className="absolute inset-0 bg-gradient-to-tr from-accent-indigo to-accent-teal rounded-full blur-[15px] opacity-40 animate-pulse-slow" />
             
-            {/* Outer border container */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent-indigo via-accent-purple to-accent-teal p-1.5 shadow-2xl">
-              {/* Inner crop image */}
               <div className="w-full h-full rounded-full bg-slate-950 overflow-hidden relative">
                 <img 
                   src="/images/profile-image/mariam.jpeg" 

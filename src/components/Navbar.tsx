@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import { FaSun, FaMoon, FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -11,23 +12,23 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
+  const { t, language, toggleLanguage } = useLanguage();
+
   const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Education', id: 'education' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Certifications', id: 'certifications' },
-    { name: 'Contact', id: 'contact' },
+    { name: t.nav.home, id: 'home' },
+    { name: t.nav.about, id: 'about' },
+    { name: t.nav.education, id: 'education' },
+    { name: t.nav.skills, id: 'skills' },
+    { name: t.nav.projects, id: 'projects' },
+    { name: t.nav.experience, id: 'experience' },
+    { name: t.nav.certifications, id: 'certifications' },
+    { name: t.nav.contact, id: 'contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      // Background color on scroll
       setScrolled(window.scrollY > 20);
 
-      // Section intersection detection
       const sections = navLinks.map(link => document.getElementById(link.id));
       let currentSection = 'home';
       const scrollPosition = window.scrollY + 200;
@@ -53,7 +54,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
     setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // height of sticky navbar
+      const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -78,13 +79,15 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           onClick={() => scrollTo('home')}
           className="cursor-pointer font-display text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-1 group"
         >
-          <span>Mariam</span>
-          <span className="text-accent-indigo dark:text-accent-teal group-hover:animate-pulse">Gamal</span>
+          <span>{language === 'ar' ? 'مريم' : 'Mariam'}</span>
+          <span className="text-accent-indigo dark:text-accent-teal group-hover:animate-pulse">
+            {language === 'ar' ? 'جمال' : 'Gamal'}
+          </span>
           <span className="inline-block w-2 h-2 rounded-full bg-accent-indigo dark:bg-accent-teal animate-pulse"></span>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -102,10 +105,20 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             href="/my resume/mariam_gamal_cv.pdf"
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-semibold px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white border border-transparent dark:border-slate-750 transition-all hover:scale-105"
+            className="text-sm font-semibold px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white border border-transparent dark:border-slate-750 transition-all hover:scale-105"
           >
-            Resume
+            {t.nav.resume}
           </a>
+
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-xs font-bold border border-slate-200/50 dark:border-slate-700/50"
+            title="Switch Language"
+          >
+            <FaGlobe className="text-accent-indigo dark:text-accent-teal" size={14} />
+            <span>{t.nav.langToggle}</span>
+          </button>
 
           {/* Theme Toggle */}
           <button
@@ -118,10 +131,17 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         </div>
 
         {/* Mobile Navbar Controls */}
-        <div className="flex lg:hidden items-center gap-4">
+        <div className="flex lg:hidden items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold border border-slate-200/50 dark:border-slate-700/50"
+          >
+            <FaGlobe className="text-accent-indigo dark:text-accent-teal" size={13} />
+            <span>{t.nav.langToggle}</span>
+          </button>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
             aria-label="Toggle theme"
           >
             {darkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
@@ -138,12 +158,12 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
 
       {/* Mobile Links Overlay */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full glass-modal border-t-0 p-6 flex flex-col space-y-4 shadow-2xl animate-fade-in">
+        <div className="lg:hidden absolute top-full left-0 w-full glass-modal border-t-0 p-6 flex flex-col space-y-3 shadow-2xl animate-fade-in">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className={`text-left py-2 px-4 rounded-xl text-sm font-medium transition-all ${
+              className={`text-start py-2.5 px-4 rounded-xl text-sm font-semibold transition-all ${
                 activeSection === link.id
                   ? 'bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal'
                   : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50'
@@ -156,9 +176,9 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             href="/my resume/mariam_gamal_cv.pdf"
             target="_blank"
             rel="noreferrer"
-            className="text-left py-2 px-4 rounded-xl text-sm font-semibold text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 border border-transparent dark:border-slate-800"
+            className="text-start py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800/50 border border-transparent dark:border-slate-800"
           >
-            Resume (PDF)
+            {t.nav.resume} (PDF)
           </a>
         </div>
       )}

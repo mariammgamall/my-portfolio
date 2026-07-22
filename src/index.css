@@ -45,6 +45,10 @@
     @apply antialiased font-sans transition-colors duration-300;
   }
 
+  [dir="rtl"] body, [dir="rtl"] {
+    font-family: 'Cairo', 'Inter', sans-serif !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 interface CounterProps {
   target: number;
@@ -21,7 +22,6 @@ function Counter({ target, suffix = '', duration = 1.5 }: CounterProps) {
       const elapsed = timestamp - startTime;
       const progress = Math.min(elapsed / (duration * 1000), 1);
       
-      // Quadratic ease out
       const easeProgress = progress * (2 - progress);
       setCount(Math.floor(easeProgress * target));
 
@@ -39,11 +39,13 @@ function Counter({ target, suffix = '', duration = 1.5 }: CounterProps) {
 }
 
 export default function About() {
+  const { t } = useLanguage();
+
   const stats = [
-    { target: 4, suffix: ' Years', label: 'E-JUST Study' },
-    { target: 12, suffix: '+', label: 'Projects Built' },
-    { target: 7, suffix: '', label: 'Internships' },
-    { target: 30, suffix: '+', label: 'Tech Skills' }
+    { target: 4, suffix: t.about.stat1Suffix, label: t.about.stat1Label },
+    { target: 12, suffix: t.about.stat2Suffix, label: t.about.stat2Label },
+    { target: 7, suffix: t.about.stat3Suffix, label: t.about.stat3Label },
+    { target: 30, suffix: t.about.stat4Suffix, label: t.about.stat4Label }
   ];
 
   return (
@@ -61,7 +63,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
           >
-            About Me
+            {t.about.title}
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -80,20 +82,20 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-7 space-y-6"
+            className="lg:col-span-7 space-y-6 text-start"
           >
             <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200">
-              Aspiring Computer Science & Engineering Graduate
+              {t.about.heading}
             </h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-              I am a Computer Science Engineering student with hands-on experience in full-stack web development and applied artificial intelligence. I focus on building robust, end-to-end web applications and high-performance backend infrastructures.
+              {t.about.p1}
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-              My engineering background enables me to design, build, and deploy complex architectures, including <strong>Retrieval Augmented Generation (RAG)</strong> systems, database schemas, and multi-role platforms. I am highly passionate about deep learning, algorithm optimization, and clean coding architectures.
+              {t.about.p2}
             </p>
           </motion.div>
 
-          {/* Stats Box / Visual element */}
+          {/* Stats Box */}
           <motion.div 
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}

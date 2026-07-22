@@ -1,39 +1,30 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaExternalLinkAlt, FaTimes, FaLayerGroup } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: 'Full-Stack Learning Management System (LMS)',
-      year: '2026',
-      tech: ['Next.js 15', 'Express.js', 'TypeScript', 'Prisma', 'PostgreSQL (Neon)', 'Vercel'],
-      description: 'Production-grade monorepo LMS with a Next.js 15 App Router frontend and Express + TypeScript + Prisma backend, deployed on Vercel with live Neon PostgreSQL. Implemented 5 specialized user roles (Admin, Doctor, TA, Student, Support Agent), full Arabic/English RTL/LTR switching, and a custom glassmorphic design system with micro-animations.',
-      demoLink: 'https://mariam-lms-portal-pink.vercel.app/',
-      githubLink: 'https://github.com/mariammgamall/Learning-Management-System',
-      image: '/images/projects-images/lms-project-image.png'
-    },
-    {
-      id: 2,
-      title: 'Aura — Customer Ordering System',
-      year: '2026',
-      tech: ['Flask', 'Python', 'Bootstrap', 'REST APIs', 'SQLAlchemy'],
-      description: 'Full-stack ordering platform with dynamic menu, real-time order tracking, and admin dashboard, built with RESTful Flask routes following MVC and OOP principles. Clean state-controlled user inputs and responsive menu visual structures.',
-      demoLink: 'https://customer-ordering-system.onrender.com/',
-      githubLink: 'https://github.com/mariammgamall/Customer-Ordering-System',
-      image: '/images/projects-images/cos-project-image.png'
-    },
-    {
-      id: 3,
-      title: 'AI Knowledge & Reasoning Engine',
-      year: '2025',
-      tech: ['Python', 'LangChain', 'FAISS', 'Hugging Face', 'PyTorch', 'Embeddings'],
-      description: 'RAG pipeline over multi-document PDF corpora using PyPDFLoader, Hugging Face Sentence Transformers, and FAISS for low-latency similarity search, orchestrated with LangChain. Applied prompt engineering and iterative testing to improve answer grounding and reduce hallucinations.',
-      demoLink: '', // No live demo link
-      githubLink: 'https://github.com/mariammgamall/Smart-RAG',
-      image: '/images/projects-images/smart-rag-project-image.png'
+  const [showAllModal, setShowAllModal] = useState(false);
+  const { t } = useLanguage();
+
+  const projects = t.projects.items;
+  const displayedProjects = projects.slice(0, 3);
+
+  const handleCardClick = (demoLink: string) => {
+    if (demoLink) {
+      window.open(demoLink, '_blank', 'noopener,noreferrer');
     }
-  ];
+  };
+
+  const openAllProjectsModal = () => {
+    setShowAllModal(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeAllProjectsModal = () => {
+    setShowAllModal(false);
+    document.body.style.overflow = '';
+  };
 
   return (
     <section id="projects" className="py-24 md:py-32 bg-slate-50/50 dark:bg-slate-900/10 relative overflow-hidden">
@@ -50,7 +41,7 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white"
           >
-            Featured Projects
+            {t.projects.title}
           </motion.h2>
           <motion.div 
             initial={{ width: 0 }}
@@ -61,9 +52,9 @@ export default function Projects() {
           />
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - 3 items max */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, idx) => (
+          {displayedProjects.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
@@ -71,7 +62,10 @@ export default function Projects() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               whileHover={{ y: -8 }}
-              className="glass-card flex flex-col h-full border-slate-205 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/5 transition-all duration-300"
+              onClick={() => handleCardClick(project.demoLink)}
+              className={`glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 ${
+                project.demoLink ? 'cursor-pointer' : ''
+              }`}
             >
               {/* Card image header */}
               <div className="w-full h-48 relative overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center">
@@ -102,44 +96,136 @@ export default function Projects() {
 
                 {/* Tech chips */}
                 <div className="flex flex-wrap gap-1.5 mb-6">
-                  {project.tech.map((t, idx) => (
+                  {project.tech.map((tItem, tIdx) => (
                     <span 
-                      key={idx}
+                      key={tIdx}
                       className="text-[10px] md:text-xs px-2.5 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800/60 text-slate-600 dark:text-slate-350 border border-slate-200/40 dark:border-slate-800/40"
                     >
-                      {t}
+                      {tItem}
                     </span>
                   ))}
                 </div>
 
-                {/* Footer Links */}
-                <div className="flex items-center gap-4 mt-auto border-t border-slate-100 dark:border-slate-800/60 pt-4">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-650 dark:text-slate-400 hover:text-accent-indigo dark:hover:text-accent-teal transition-colors"
-                  >
-                    <FaGithub size={16} />
-                    GitHub Repo
-                  </a>
-                  {project.demoLink && project.demoLink !== '#' && (
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-650 dark:text-slate-400 hover:text-accent-indigo dark:hover:text-accent-teal transition-colors"
-                    >
+                {/* Footer Links - Demo link only, GitHub removed */}
+                {project.demoLink && (
+                  <div className="flex items-center gap-4 mt-auto border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                    <span className="flex items-center gap-2 text-xs md:text-sm font-bold text-accent-indigo dark:text-accent-teal group-hover:underline">
                       <FaExternalLinkAlt size={13} />
-                      Live Demo
-                    </a>
-                  )}
-                </div>
+                      {t.projects.liveDemo}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* View All Projects Button */}
+        <div className="mt-16 text-center">
+          <button
+            onClick={openAllProjectsModal}
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal hover:opacity-95 text-white shadow-xl hover:shadow-accent-indigo/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base cursor-pointer"
+          >
+            <FaLayerGroup size={16} />
+            <span>{t.projects.viewAll}</span>
+          </button>
+        </div>
       </div>
+
+      {/* All Projects Page Modal */}
+      <AnimatePresence>
+        {showAllModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeAllProjectsModal}
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-md"
+            />
+
+            {/* Modal Container */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: 'spring', duration: 0.5 }}
+              className="relative w-full max-w-6xl max-h-[90vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
+            >
+              {/* Modal Header */}
+              <div className="flex justify-between items-center px-6 md:px-8 py-5 border-b border-slate-100 dark:border-slate-800">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal">
+                    <FaLayerGroup size={18} />
+                  </div>
+                  <h3 className="font-display font-extrabold text-xl md:text-2xl text-slate-900 dark:text-white">
+                    {t.projects.allModalTitle}
+                  </h3>
+                </div>
+                <button
+                  onClick={closeAllProjectsModal}
+                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                >
+                  <FaTimes size={18} />
+                </button>
+              </div>
+
+              {/* Modal Content / All Projects Grid */}
+              <div className="flex-1 overflow-y-auto p-6 md:p-8 bg-slate-50/50 dark:bg-slate-950/50">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                  {projects.map((project) => (
+                    <div
+                      key={project.id}
+                      onClick={() => handleCardClick(project.demoLink)}
+                      className={`glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 ${
+                        project.demoLink ? 'cursor-pointer' : ''
+                      }`}
+                    >
+                      <div className="w-full h-44 relative overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-center">
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col flex-1">
+                        <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 self-start mb-3">
+                          {project.year}
+                        </span>
+                        <h4 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
+                          {project.title}
+                        </h4>
+                        <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed mb-4 flex-1">
+                          {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-1.5 mb-4">
+                          {project.tech.map((tItem, tIdx) => (
+                            <span 
+                              key={tIdx}
+                              className="text-[10px] px-2 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-350"
+                            >
+                              {tItem}
+                            </span>
+                          ))}
+                        </div>
+                        {project.demoLink && (
+                          <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span className="flex items-center gap-2 text-xs font-bold text-accent-indigo dark:text-accent-teal">
+                              <FaExternalLinkAlt size={12} />
+                              {t.projects.liveDemo}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
