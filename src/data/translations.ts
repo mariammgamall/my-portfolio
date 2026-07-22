@@ -382,7 +382,7 @@ export const translations = {
       location: "الموقع",
       locationVal: "الإسكندرية، مصر",
       nameLabel: "الاسم",
-      namePlaceholder: "اسمك الكريم",
+      namePlaceholder: "اسمك",
       emailLabel: "عنوان البريد الإلكتروني",
       emailPlaceholder: "your.email@example.com",
       msgLabel: "الرسالة",

@@ -233,7 +233,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex items-center space-x-4 rtl:space-x-reverse"
+            className="flex items-center gap-4"
           >
             <a 
               href="https://github.com/mariammgamall" 

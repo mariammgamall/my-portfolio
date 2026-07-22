@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
 
             {/* Social profiles row */}
-            <div className="flex items-center space-x-4 rtl:space-x-reverse border-t border-slate-200/50 dark:border-slate-800/50 pt-6">
+            <div className="flex items-center gap-4 border-t border-slate-200/50 dark:border-slate-800/50 pt-6">
               <a
                 href="https://github.com/mariammgamall"
                 target="_blank"
