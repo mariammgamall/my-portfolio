@@ -13,7 +13,7 @@ export const translations = {
       langToggle: "عربي"
     },
     hero: {
-      badge: "Available for Internships, Job Opportunities ,and Projects",
+      badge: "Available for Job Opportunities, Internships ,and Projects",
       greeting: "Hi, I'm",
       name: "Mariam Gamal",
       title: "Computer Science Engineer | Software Engineering & AI",
@@ -74,6 +74,8 @@ export const translations = {
       title: "Featured Projects",
       viewAll: "View All Projects",
       allModalTitle: "All Projects",
+      projectDetailsTitle: "Project Details",
+      viewDetails: "View Details",
       liveDemo: "Live Demo",
       close: "Close",
       items: [
@@ -212,7 +214,7 @@ export const translations = {
       langToggle: "English"
     },
     hero: {
-      badge: "متاحة لفرص التدريب، العمل، والمشاريع",
+      badge: "متاحة لفرص العمل، التدريب، والمشاريع",
       greeting: "أهلاً، أنا",
       name: "مريم جمال",
       title: "مهندسة علوم حاسب | هندسة البرمجيات والذكاء الاصطناعي",
@@ -273,6 +275,8 @@ export const translations = {
       title: "المشاريع البارزة",
       viewAll: "عرض جميع المشاريع",
       allModalTitle: "جميع المشاريع",
+      projectDetailsTitle: "تفاصيل المشروع",
+      viewDetails: "عرض التفاصيل",
       liveDemo: "المعاينة المباشرة",
       close: "إغلاق",
       items: [

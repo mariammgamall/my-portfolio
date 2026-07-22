@@ -77,7 +77,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         {/* Logo */}
         <div 
           onClick={() => scrollTo('home')}
-          className="cursor-pointer font-display text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-1 group"
+          className="cursor-pointer font-display text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5 group select-none"
         >
           <span>{language === 'ar' ? 'مريم' : 'Mariam'}</span>
           <span className="text-accent-indigo dark:text-accent-teal group-hover:animate-pulse">
@@ -87,12 +87,12 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => scrollTo(link.id)}
-              className={`text-sm font-medium transition-colors hover:text-accent-indigo dark:hover:text-accent-teal ${
+              className={`text-sm font-medium transition-colors hover:text-accent-indigo dark:hover:text-accent-teal cursor-pointer ${
                 activeSection === link.id
                   ? 'text-accent-indigo dark:text-accent-teal font-semibold'
                   : 'text-slate-600 dark:text-slate-300'
@@ -110,45 +110,48 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             {t.nav.resume}
           </a>
 
-          {/* Language Switcher */}
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-xs font-bold border border-slate-200/50 dark:border-slate-700/50"
-            title="Switch Language"
-          >
-            <FaGlobe className="text-accent-indigo dark:text-accent-teal" size={14} />
-            <span>{t.nav.langToggle}</span>
-          </button>
+          {/* Action controls group with explicit spacing */}
+          <div className="flex items-center gap-3 ms-2 border-s border-slate-200/60 dark:border-slate-800/60 ps-4">
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-xs font-bold border border-slate-200/50 dark:border-slate-700/50 cursor-pointer"
+              title="Switch Language"
+            >
+              <FaGlobe className="text-accent-indigo dark:text-accent-teal" size={14} />
+              <span>{t.nav.langToggle}</span>
+            </button>
 
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-105 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
+            {/* Theme Toggle */}
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-105 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all cursor-pointer"
+              aria-label="Toggle theme"
+            >
+              {darkMode ? <FaSun size={17} /> : <FaMoon size={17} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navbar Controls */}
         <div className="flex lg:hidden items-center gap-3">
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold border border-slate-200/50 dark:border-slate-700/50"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold border border-slate-200/50 dark:border-slate-700/50 cursor-pointer"
           >
             <FaGlobe className="text-accent-indigo dark:text-accent-teal" size={13} />
             <span>{t.nav.langToggle}</span>
           </button>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+            className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all cursor-pointer"
             aria-label="Toggle theme"
           >
             {darkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+            className="p-2 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
             aria-label="Toggle menu"
           >
             {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
