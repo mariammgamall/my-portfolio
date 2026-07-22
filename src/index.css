@@ -66,7 +66,7 @@
   }
 
   .glass-navbar {
-    @apply bg-white/70 dark:bg-dark-bg/85 backdrop-blur-lg border-b border-black/5 dark:border-slate-800/60;
+    @apply bg-white/80 dark:bg-dark-bg/85 backdrop-blur-lg border-none shadow-lg shadow-black/5 dark:shadow-black/30;
   }
 
   .glass-modal {
