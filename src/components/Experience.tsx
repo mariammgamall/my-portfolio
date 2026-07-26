@@ -108,10 +108,10 @@ export default function Experience() {
                     </span>
 
                     <h3 className="font-display font-bold text-lg md:text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
-                      {exp.title}
+                      {exp.company}
                     </h3>
                     <h4 className="font-semibold text-sm md:text-base text-slate-500 dark:text-slate-400 mt-1 mb-4">
-                      {exp.company}
+                      {exp.title}
                     </h4>
 
                     <p className="text-slate-650 dark:text-slate-400 text-sm md:text-base leading-relaxed text-start whitespace-pre-line">

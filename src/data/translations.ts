@@ -115,43 +115,43 @@ export const translations = {
           title: "Software Testing",
           company: "Information Technology Institute (ITI)",
           period: "Aug 2026 - Present",
-          desc: "• Conducting comprehensive software testing procedures to ensure application quality and functionality across multiple projects.\n• Collaborating with development teams to identify and resolve defects throughout the software development lifecycle, implementing automated testing solutions."
+          desc: "Conducting comprehensive software testing procedures to ensure application quality and functionality across multiple projects & Collaborating with development teams to identify and resolve defects throughout the software development lifecycle, implementing automated testing solutions."
         },
         {
           title: "Front-End Development Diploma",
           company: "Route Academy- IT Training Center",
           period: "June 2026 - Present",
-          desc: "• Undertaking hands-on training in HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM and modern Java Script (ES6, DOM, BOM, AJAX, Fetch API, OOP)"
+          desc: "Undertaking hands-on training in HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM and modern Java Script (ES6, DOM, BOM, AJAX, Fetch API, OOP)."
         },
         {
           title: "UI/UX Design Internship",
           company: "SyntecxHub Company",
           period: "Jun 3 – Jul 3, 2026",
-          desc: "• Designed and developed 4 high-fidelity UI/UX projects during a one month internship, applying user centered design principles and pixel perfect front-end implementation; Created wireframes and prototypes reducing development iteration time by 25% through early user feedback integration."
+          desc: "Designed and developed 4 high-fidelity UI/UX projects during a one month internship, applying user centered design principles and pixel perfect front-end implementation; Created wireframes and prototypes reducing development iteration time by 25% through early user feedback integration."
         },
         {
           title: "AI Internship",
           company: "Decode Labs Company",
           period: "Jun 1 – Jul 1, 2026",
-          desc: "• Worked on applied AI projects during a one month internship, strengthening practical skills in AI development and implementation."
+          desc: "Worked on applied AI projects during a one month internship, strengthening practical skills in AI development and implementation."
         },
         {
           title: "Generative AI Internship Program",
           company: "Tips Hindawi Company",
           period: "Dec 2025 – Feb 2026",
-          desc: "• Completed an intensive program on generative AI concepts, including LLMs and applied prompt engineering, through hands on implementation exercises."
+          desc: "Completed an intensive program on generative AI concepts, including LLMs and applied prompt engineering, through hands on implementation exercises."
         },
         {
           title: "Online Training IT Intern",
           company: "Saham Al Shamal Eng’g Consultants Co. (SASEC)",
           period: "Jul – Aug 2025",
-          desc: "• Completed technical training on engineering consultancy processes and systems."
+          desc: "Completed technical training on engineering consultancy processes and systems."
         },
         {
           title: "Industrial IT Intern",
           company: "Alexandria Mineral Oils Company (AMOC)",
           period: "Sep 2024",
-          desc: "• Monitored industrial control systems processing 1000+ data points daily, identifying and resolving 15+ operational issues reducing downtime by 20%; performed data analysis on production metrics, creating automated reports saving 10+ hours weekly in manual data processing."
+          desc: "Monitored industrial control systems processing 1000+ data points daily, identifying and resolving 15+ operational issues reducing downtime by 20%; performed data analysis on production metrics, creating automated reports saving 10+ hours weekly in manual data processing."
         }
       ]
     },
@@ -316,43 +316,43 @@ export const translations = {
           title: "اختبار البرمجيات (Software Testing)",
           company: "معهد تكنولوجيا المعلومات (ITI)",
           period: "أغسطس 2026 - الحالي",
-          desc: "• إجراء إجراءات اختبار البرمجيات الشاملة لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة.\n• التعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات، وتنفيذ حلول الاختبار الآلي."
+          desc: "إجراء إجراءات اختبار البرمجيات الشاملة لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة والتعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات، وتنفيذ حلول الاختبار الآلي."
         },
         {
           title: "دبلومة تطوير الواجهات الأمامية (Front-End Development Diploma)",
           company: "Route Academy- IT Training Center",
           period: "يونيو 2026 - الحالي",
-          desc: "• التدريب العملي والتطبيقي على HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM والـ JavaScript الحديثة (ES6, DOM, BOM, AJAX, Fetch API, OOP)"
+          desc: "التدريب العملي والتطبيقي على HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM والـ JavaScript الحديثة (ES6, DOM, BOM, AJAX, Fetch API, OOP)."
         },
         {
           title: "تدريب تصميم واجهات وتجربة المستخدم (UI/UX Design Internship)",
           company: "شركة سينتكس هاب (SyntecxHub Company)",
           period: "3 يونيو – 3 يوليو 2026",
-          desc: "• تصميم وتطوير 4 مشاريع UI/UX عالية الدقة خلال تدريب لمدة شهر، مع تطبيق مبادئ التصميم المتمحور حول المستخدم والتنفيذ الدقيق للواجهات الأمامية؛ إنشاء النماذج الهيكلية والنماذج الأولية مما قلل وقت تكرار التطوير بنسبة 25٪ من خلال التغذية الراجعة المبكرة."
+          desc: "تصميم وتطوير 4 مشاريع UI/UX عالية الدقة خلال تدريب لمدة شهر، مع تطبيق مبادئ التصميم المتمحور حول المستخدم والتنفيذ الدقيق للواجهات الأمامية؛ إنشاء النماذج الهيكلية والنماذج الأولية مما قلل وقت تكرار التطوير بنسبة 25٪ من خلال التغذية الراجعة المبكرة."
         },
         {
           title: "تدريب الذكاء الاصطناعي (AI Internship)",
           company: "شركة ديكود لابس (Decode Labs Company)",
           period: "1 يونيو – 1 يوليو 2026",
-          desc: "• العمل على مشاريع ذكاء اصطناعي تطبيقية خلال تدريب لمدة شهر، وتعزيز المهارات العملية في تطوير وتنفيذ حلول الذكاء الاصطناعي."
+          desc: "العمل على مشاريع ذكاء اصطناعي تطبيقية خلال تدريب لمدة شهر، وتعزيز المهارات العملية في تطوير وتنفيذ حلول الذكاء الاصطناعي."
         },
         {
           title: "برنامج تدريب الذكاء الاصطناعي التوليدي (Generative AI Internship Program)",
           company: "شركة هنداوي (Tips Hindawi Company)",
           period: "ديسمبر 2025 – فبراير 2026",
-          desc: "• إكمال برنامج مكثف حول مفاهيم الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغة الكبيرة (LLMs) وهندسة الأوامر التطبيقية، من خلال تمارين التنفيذ العملي."
+          desc: "إكمال برنامج مكثف حول مفاهيم الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغة الكبيرة (LLMs) وهندسة الأوامر التطبيقية، من خلال تمارين التنفيذ العملي."
         },
         {
           title: "تدريب إلكتروني في تكنولوجيا المعلومات (Online Training IT Intern)",
           company: "شركة سهام الشمال للاستشارات الهندسية (SASEC)",
           period: "يوليو – أغسطس 2025",
-          desc: "• إكمال التدريب التقني حول عمليات وأنظمة الاستشارات الهندسية."
+          desc: "إكمال التدريب التقني حول عمليات وأنظمة الاستشارات الهندسية."
         },
         {
           title: "تدريب صناعي في تكنولوجيا المعلومات (Industrial IT Intern)",
           company: "شركة الإسكندرية للزيوت المعدنية (أموك - AMOC)",
           period: "سبتمبر 2024",
-          desc: "• مراقبة أنظمة التحكم الصناعية التي تعالج أكثر من 1000 نقطة بيانات يومياً، وتحديد وحل أكثر من 15 مشكلة تشغيلية مما قلل من وقت التوقف بنسبة 20٪؛ إجراء تحليل البيانات لمقاييس الإنتاج، وإنشاء تقارير مؤتمتة وفرت أكثر من 10 ساعات أسبوعياً في معالجة البيانات اليدوية."
+          desc: "مراقبة أنظمة التحكم الصناعية التي تعالج أكثر من 1000 نقطة بيانات يومياً، وتحديد وحل أكثر من 15 مشكلة تشغيلية مما قلل من وقت التوقف بنسبة 20٪؛ إجراء تحليل البيانات لمقاييس الإنتاج، وإنشاء تقارير مؤتمتة وفرت أكثر من 10 ساعات أسبوعياً في معالجة البيانات اليدوية."
         }
       ]
     },
