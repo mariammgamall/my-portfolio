@@ -165,10 +165,10 @@ export const translations = {
       items: [
         { title: "Elements of AI", issuer: "University of Helsinki & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png", pdf: "" },
         { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png", pdf: "/certificates/EF SET C2 Proficient Certificate.pdf" },
-        { title: "Industrial Training Certificate", issuer: "AMOC", image: "/certificates/Industrial Training Certificate - AMOC.jpeg", pdf: "" },
+        { title: "AMOC Industrial IT Training Certificate", issuer: "AMOC", image: "/certificates/AMOC Industrial IT Training Certificate.png", pdf: "/certificates/AMOC Industrial IT Training Certificate.pdf" },
         { title: "SASEC CS Internship Certificate", issuer: "SASEC", image: "/certificates/SASEC CS Internship Certificate.png", pdf: "/certificates/SASEC CS Internship Certificate.pdf" },
         { title: "Generative AI Internship Certificate", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
-        { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
+        { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
         { title: "Syntecx Hub UI/UX Design Internship Certificate", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" }
       ]
     },
@@ -366,10 +366,10 @@ export const translations = {
       items: [
         { title: "Elements of AI", issuer: "جامعة هلسنكي & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png", pdf: "" },
         { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png", pdf: "/certificates/EF SET C2 Proficient Certificate.pdf" },
-        { title: "شهادة التدريب الصناعي - AMOC", issuer: "شركة أموك (AMOC)", image: "/certificates/Industrial Training Certificate - AMOC.jpeg", pdf: "" },
+        { title: "شهادة التدريب الصناعي - AMOC", issuer: "شركة أموك (AMOC)", image: "/certificates/AMOC Industrial IT Training Certificate.png", pdf: "/certificates/AMOC Industrial IT Training Certificate.pdf" },
         { title: "شهادة تدريب SASEC في علوم الحاسب", issuer: "مؤسسة SASEC", image: "/certificates/SASEC CS Internship Certificate.png", pdf: "/certificates/SASEC CS Internship Certificate.pdf" },
         { title: "شهادة تدريب الذكاء الاصطناعي التوليدي", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
-        { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
+        { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
         { title: "شهادة تدريب UI/UX Design", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" }
       ]
     },

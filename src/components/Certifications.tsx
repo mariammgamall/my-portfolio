@@ -219,7 +219,7 @@ export default function Certifications() {
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal text-xs font-bold hover:bg-accent-indigo/20 transition-colors"
                     >
                       <FaExternalLinkAlt size={12} />
-                      <span className="hidden sm:inline">{t.certifications.openPdf}</span>
+                      <span>{t.certifications.openPdf}</span>
                     </a>
                   )}
                   <button
@@ -231,14 +231,28 @@ export default function Certifications() {
                 </div>
               </div>
 
-              {/* Image Preview Container */}
-              <div className="flex-1 bg-slate-950 flex items-center justify-center p-3 md:p-6 overflow-auto min-h-[300px]">
-                <img 
-                  src={activeCert.image} 
-                  alt={activeCert.title} 
-                  className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
-                  loading="eager"
-                />
+              {/* Image / PDF Preview Container */}
+              <div className="flex-1 bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto min-h-[350px]">
+                {activeCert.image ? (
+                  <img 
+                    src={activeCert.image} 
+                    alt={activeCert.title} 
+                    className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
+                    loading="eager"
+                  />
+                ) : activeCert.pdf ? (
+                  <div className="w-full h-full flex flex-col items-center justify-center">
+                    <iframe
+                      src={`${activeCert.pdf}#view=FitH`}
+                      title={activeCert.title}
+                      className="w-full h-[60vh] md:h-[70vh] rounded-lg shadow-2xl border-0 bg-white"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-slate-400 text-center py-12">
+                    <p>No preview image or PDF available.</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           </div>
