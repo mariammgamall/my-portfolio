@@ -112,46 +112,46 @@ export const translations = {
       title: "Professional Experience",
       items: [
         {
-          title: "Full Stack .NET Web Developer",
-          company: "Digital Egypt Pioneers Initiative (DEPI)",
-          period: "July 2026 - Present",
-          desc: "Collaborating in an intensive professional training track to architect, develop, and test scalable web architectures using .NET Core, C#, Web APIs, and React. Refining database design using SQL Server and implementing security best practices."
+          title: "Software Testing",
+          company: "Information Technology Institute (ITI)",
+          period: "Aug 2026 - Present",
+          desc: "• Conducting comprehensive software testing procedures to ensure application quality and functionality across multiple projects.\n• Collaborating with development teams to identify and resolve defects throughout the software development lifecycle, implementing automated testing solutions."
         },
         {
-          title: "Front-End Development Student",
-          company: "Route Academy",
+          title: "Front-End Development Diploma",
+          company: "Route Academy- IT Training Center",
           period: "June 2026 - Present",
-          desc: "Enrolled in Route's Front-End Development Diploma focusing on React.js, modern state management (Redux/Context API), advanced JavaScript, Tailwind CSS, responsive layouts, and performance optimization techniques."
+          desc: "• Undertaking hands-on training in HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM and modern Java Script (ES6, DOM, BOM, AJAX, Fetch API, OOP)"
         },
         {
-          title: "UI/UX Design Intern",
+          title: "UI/UX Design Internship",
           company: "SyntecxHub Company",
-          period: "June - July 2026",
-          desc: "Collaborated on user research, created wireframes, and drafted high-fidelity responsive UI designs using Figma. Conducted interactive user journey mapping and aligned layouts with product specifications."
+          period: "Jun 3 – Jul 3, 2026",
+          desc: "• Designed and developed 4 high-fidelity UI/UX projects during a one month internship, applying user centered design principles and pixel perfect front-end implementation; Created wireframes and prototypes reducing development iteration time by 25% through early user feedback integration."
         },
         {
           title: "AI Internship",
           company: "Decode Labs Company",
-          period: "June - July 2026",
-          desc: "Designed and deployed machine learning pipelines, ran exploratory data analysis (EDA), implemented deep learning modeling using PyTorch, and tuned hyperparameters to optimize inference metrics."
+          period: "Jun 1 – Jul 1, 2026",
+          desc: "• Worked on applied AI projects during a one month internship, strengthening practical skills in AI development and implementation."
         },
         {
           title: "Generative AI Internship Program",
-          company: "Tips Hindawi",
-          period: "December 2025 - February 2026",
-          desc: "Developed Retrieval-Augmented Generation (RAG) engines. Configured similarity searches using FAISS, orchestrated components with LangChain, and applied structured prompt engineering to mitigate output hallucinations."
+          company: "Tips Hindawi Company",
+          period: "Dec 2025 – Feb 2026",
+          desc: "• Completed an intensive program on generative AI concepts, including LLMs and applied prompt engineering, through hands on implementation exercises."
         },
         {
-          title: "Online Training Intern",
-          company: "SASEC",
-          period: "July - August 2025",
-          desc: "Acquired hands-on knowledge in software engineering principles, database structures (SQL/NoSQL), object-oriented programming (OOP) paradigms, and algorithmic optimization."
+          title: "Online Training IT Intern",
+          company: "Saham Al Shamal Eng’g Consultants Co. (SASEC)",
+          period: "Jul – Aug 2025",
+          desc: "• Completed technical training on engineering consultancy processes and systems."
         },
         {
-          title: "Industrial Intern",
+          title: "Industrial IT Intern",
           company: "Alexandria Mineral Oils Company (AMOC)",
-          period: "September 2024",
-          desc: "Gained on-site exposure to industrial operations, IT system infrastructures, hardware networking configurations, and relational database monitoring tools."
+          period: "Sep 2024",
+          desc: "• Monitored industrial control systems processing 1000+ data points daily, identifying and resolving 15+ operational issues reducing downtime by 20%; performed data analysis on production metrics, creating automated reports saving 10+ hours weekly in manual data processing."
         }
       ]
     },
@@ -313,46 +313,46 @@ export const translations = {
       title: "الخبرات العملية والتدريب",
       items: [
         {
-          title: "مطورة ويب متكاملة .NET",
-          company: "مبادرة رواد مصر الرقمية (DEPI)",
-          period: "يوليو 2026 - الحالي",
-          desc: "التدريب المكثف على تصميم وتطوير تطبيقات الويب القابلة للتوسع باستخدام .NET Core و C# و Web APIs و React، مع تحسين تصميم قواعد البيانات SQL Server وتطبيق أفضل معايير الأمان."
+          title: "اختبار البرمجيات (Software Testing)",
+          company: "معهد تكنولوجيا المعلومات (ITI)",
+          period: "أغسطس 2026 - الحالي",
+          desc: "• إجراء إجراءات اختبار البرمجيات الشاملة لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة.\n• التعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات، وتنفيذ حلول الاختبار الآلي."
         },
         {
-          title: "طالبة تطوير واجهات المستخدم (Front-End)",
-          company: "أكاديمية روت (Route Academy)",
+          title: "دبلومة تطوير الواجهات الأمامية (Front-End Development Diploma)",
+          company: "Route Academy- IT Training Center",
           period: "يونيو 2026 - الحالي",
-          desc: "دراسة دبلومة تطوير الواجهات الأمامية باستخدام React.js، إدارة الحالة (Redux/Context API)، Tailwind CSS، والتصاميم المتجاوبة مع تطبيق تقنيات تحسين الأداء."
+          desc: "• التدريب العملي والتطبيقي على HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM والـ JavaScript الحديثة (ES6, DOM, BOM, AJAX, Fetch API, OOP)"
         },
         {
-          title: "متدربة تصميم واجهات وتجربة المستخدم (UI/UX)",
-          company: "شركة سينتكس هاب (SyntecxHub)",
-          period: "يونيو - يوليو 2026",
-          desc: "المشاركة في أبحاث المستخدمين، إنشاء النماذج الهيكلية (Wireframes)، وتصميم واجهات تفاعلية عالية الدقة باستخدام Figma، ورسم رحلات المستخدمين."
+          title: "تدريب تصميم واجهات وتجربة المستخدم (UI/UX Design Internship)",
+          company: "شركة سينتكس هاب (SyntecxHub Company)",
+          period: "3 يونيو – 3 يوليو 2026",
+          desc: "• تصميم وتطوير 4 مشاريع UI/UX عالية الدقة خلال تدريب لمدة شهر، مع تطبيق مبادئ التصميم المتمحور حول المستخدم والتنفيذ الدقيق للواجهات الأمامية؛ إنشاء النماذج الهيكلية والنماذج الأولية مما قلل وقت تكرار التطوير بنسبة 25٪ من خلال التغذية الراجعة المبكرة."
         },
         {
-          title: "تدريب الذكاء الاصطناعي",
-          company: "شركة ديكود لابس (Decode Labs)",
-          period: "يونيو - يوليو 2026",
-          desc: "تصميم وتنفيذ خطوط معالجة تعلم الآلة، تحليل البيانات الاستكشافي (EDA)، بناء نماذج التعلم العميق باستخدام PyTorch وضبط المعلمات لتحسين الأداء."
+          title: "تدريب الذكاء الاصطناعي (AI Internship)",
+          company: "شركة ديكود لابس (Decode Labs Company)",
+          period: "1 يونيو – 1 يوليو 2026",
+          desc: "• العمل على مشاريع ذكاء اصطناعي تطبيقية خلال تدريب لمدة شهر، وتعزيز المهارات العملية في تطوير وتنفيذ حلول الذكاء الاصطناعي."
         },
         {
-          title: "برنامج تدريب الذكاء الاصطناعي التوليدي",
-          company: "مؤسسة هنداوي (Tips Hindawi)",
-          period: "ديسمبر 2025 - فبراير 2026",
-          desc: "تطوير محركات RAG، إعداد أبحاث التشابه باستخدام FAISS وتنظيم المكونات باستخدام LangChain مع تطبيق هندسة الأوامر لتجنب الهلوسة."
+          title: "برنامج تدريب الذكاء الاصطناعي التوليدي (Generative AI Internship Program)",
+          company: "شركة هنداوي (Tips Hindawi Company)",
+          period: "ديسمبر 2025 – فبراير 2026",
+          desc: "• إكمال برنامج مكثف حول مفاهيم الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغة الكبيرة (LLMs) وهندسة الأوامر التطبيقية، من خلال تمارين التنفيذ العملي."
         },
         {
-          title: "متدربة تدريب إلكتروني",
-          company: "مؤسسة SASEC",
-          period: "يوليو - أغسطس 2025",
-          desc: "اكتساب خبرة عملية في مبادئ هندسة البرمجيات، قواعد البيانات (SQL/NoSQL)، البرمجة كائنية التوجه (OOP)، وتحسين الخوارزميات."
+          title: "تدريب إلكتروني في تكنولوجيا المعلومات (Online Training IT Intern)",
+          company: "شركة سهام الشمال للاستشارات الهندسية (SASEC)",
+          period: "يوليو – أغسطس 2025",
+          desc: "• إكمال التدريب التقني حول عمليات وأنظمة الاستشارات الهندسية."
         },
         {
-          title: "تدريب ميداني صناعي",
+          title: "تدريب صناعي في تكنولوجيا المعلومات (Industrial IT Intern)",
           company: "شركة الإسكندرية للزيوت المعدنية (أموك - AMOC)",
           period: "سبتمبر 2024",
-          desc: "التعرف على العمليات الصناعية الميدانية، البنية التحتية لتكنولوجيا المعلومات، إعدادات شبكات الأجهزة، وأدوات مراقبة قواعد البيانات."
+          desc: "• مراقبة أنظمة التحكم الصناعية التي تعالج أكثر من 1000 نقطة بيانات يومياً، وتحديد وحل أكثر من 15 مشكلة تشغيلية مما قلل من وقت التوقف بنسبة 20٪؛ إجراء تحليل البيانات لمقاييس الإنتاج، وإنشاء تقارير مؤتمتة وفرت أكثر من 10 ساعات أسبوعياً في معالجة البيانات اليدوية."
         }
       ]
     },

@@ -114,7 +114,7 @@ export default function Experience() {
                       {exp.company}
                     </h4>
 
-                    <p className="text-slate-650 dark:text-slate-400 text-sm md:text-base leading-relaxed text-start">
+                    <p className="text-slate-650 dark:text-slate-400 text-sm md:text-base leading-relaxed text-start whitespace-pre-line">
                       {exp.desc}
                     </p>
                   </div>
