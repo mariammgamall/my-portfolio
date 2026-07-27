@@ -26,10 +26,9 @@ export const translations = {
     about: {
       title: "About Me",
       heading: "Aspiring Software Engineer & AI Developer",
-      p1: "I am a Computer Science Engineering student passionate about Software Engineering, Artificial Intelligence, UI/UX Design, Full-Stack Web Development, and Mobile Application Development. I enjoy transforming ideas into scalable, user focused digital solutions by combining modern technologies with strong engineering principles.",
-      p2: "My experience includes developing responsive web applications, RESTful APIs, database design, backend architectures, and cross platform mobile applications. I also build AI-powered solutions, including Retrieval Augmented Generation (RAG) systems, and enjoy exploring machine learning, deep learning, and intelligent automation to solve real world problems.",
-      p3: "I am passionate about writing clean, maintainable, and efficient code while following best practices in software architecture and system design. I continuously learn emerging technologies, improve my problem solving skills, and strive to build applications that deliver excellent performance, scalability, and user experience.",
-      p4: "Beyond development, I enjoy collaborating on innovative projects, learning new frameworks and tools, and embracing challenges that help me grow as a software engineer. My goal is to create impactful software that combines robust engineering with intelligent technologies to make a meaningful difference.",
+      p1: "I am a Computer Science Engineering student passionate about Software Engineering, Artificial Intelligence, Full Stack Web Development, Mobile Application Development, and UI/UX Design. I enjoy transforming ideas into scalable, user focused digital solutions by combining modern technologies with strong engineering principles.",
+      p2: "My experience includes developing responsive web and mobile applications, designing backend architectures, building RESTful APIs, working with databases, and implementing AI powered solutions such as Retrieval Augmented Generation (RAG) systems. I continuously explore machine learning and modern software technologies to solve real world problems.",
+      p3: "I am committed to writing clean, maintainable, and efficient code while following best practices in software architecture and system design. Through continuous learning, collaboration, and hands on projects, I strive to build high quality applications that deliver excellent performance, scalability, and user experience.",
       stat1Label: "E-JUST Study",
       stat1Suffix: " Years",
       stat2Label: "Projects Built",
@@ -67,6 +66,7 @@ export const translations = {
       categories: {
         languages: "Languages",
         web: "Web & Frameworks",
+        mobileUi: "Mobile & UI/UX",
         db: "Databases & ORMs",
         ai: "AI & Machine Learning",
         tools: "Tools & Workflow"
@@ -229,10 +229,9 @@ export const translations = {
     about: {
       title: "نبذة عني",
       heading: "مهندسة برمجيات ومطورة ذكاء اصطناعي طموحة",
-      p1: "أنا طالبة في قسم هندسة وعلوم الحاسب بشغف كبير في هندسة البرمجيات، الذكاء الاصطناعي، تصميم واجهات المستخدم (UI/UX)، تطوير الويب المتكامل (Full-Stack)، وتطوير تطبيقات الموبايل. أستمتع بتحويل الأفكار إلى حلول رقمية قابلة للتوسع ومتمحورة حول المستخدم من خلال دمج التقنيات الحديثة مع المبادئ الهندسية القوية.",
-      p2: "تتضمن خبرتي تطوير تطبيقات الويب المتجاوبة، واجهات برمجة التطبيقات (RESTful APIs)، تصميم قواعد البيانات، البنيات التحتية الخلفية، وتطبيقات الموبايل متعددة المنصات. كما أقوم ببناء حلول مدعومة بالذكاء الاصطناعي، بما في ذلك أنظمة RAG، واستكشاف التعلم الآلي والتعلم العميق والأتمتة الذكية لحل المشكلات الواقعية.",
-      p3: "أنا شغوفة بكتابة كود نظيف، قابل للصيانة، وفعال مع اتباع أفضل الممارسات في معمارية البرمجيات وتصميم الأنظمة. أستمر دائماً في تعلم التقنيات الناشئة، وتحسين مهاراتي في حل المشكلات، وأسعى لبناء تطبيقات تقدم أداءً ممتازاً، وسلاسة، وتجربة مستخدم متميزة.",
-      p4: "بعيداً عن التطوير، أستمتع بالتعاون في المشاريع المبتكرة، وتعلم أطر العمل والأدوات الجديدة، ومواجهة التحديات التي تساعدني على النمو كمهندسة برمجيات. هدفي هو إنشاء برمجيات ذات تأثير تجمع بين الهندسة القوية والتقنيات الذكية لإحداث فارق حقيقي.",
+      p1: "أنا طالبة في قسم هندسة وعلوم الحاسب بشغف كبير في هندسة البرمجيات، الذكاء الاصطناعي، تطوير الويب المتكامل (Full Stack)، تطوير تطبيقات الموبايل، وتصميم واجهات وتجربة المستخدم (UI/UX). أستمتع بتحويل الأفكار إلى حلول رقمية قابلة للتوسع ومتمحورة حول المستخدم من خلال دمج التقنيات الحديثة مع المبادئ الهندسية القوية.",
+      p2: "تتضمن خبرتي تطوير تطبيقات الويب والموبايل المتجاوبة، تصميم البنيات التحتية الخلفية، بناء واجهات برمجة التطبيقات (RESTful APIs)، العمل مع قواعد البيانات، وتنفيذ الحلول المدعومة بالذكاء الاصطناعي مثل أنظمة RAG. أستمر دائماً في استكشاف التعلم الآلي وتقنيات البرمجيات الحديثة لحل المشكلات الواقعية.",
+      p3: "أنا ملتزمة بكتابة كود نظيف، قابل للصيانة، وفعال مع اتباع أفضل الممارسات في معمارية البرمجيات وتصميم الأنظمة. من خلال التعلم المستمر، التعاون، والمشاريع التطبيقية، أسعى لبناء تطبيقات عالية الجودة تقدم أداءً ممتازاً، وسلاسة، وتجربة مستخدم متميزة.",
       stat1Label: "سنوات دراسة الجامعة",
       stat1Suffix: " سنوات",
       stat2Label: "مشروع منجز",
@@ -270,6 +269,7 @@ export const translations = {
       categories: {
         languages: "لغات البرمجة",
         web: "الويب وأطر العمل",
+        mobileUi: "الموبايل وتصميم الواجهات",
         db: "قواعد البيانات",
         ai: "الذكاء الاصطناعي والتعلم الآلي",
         tools: "الأدوات وبيئة العمل"

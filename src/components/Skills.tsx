@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaCode, FaGlobe, FaDatabase, FaBrain, FaTools } from 'react-icons/fa';
+import { FaCode, FaGlobe, FaMobileAlt, FaDatabase, FaBrain, FaTools } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Skills() {
@@ -9,7 +9,7 @@ export default function Skills() {
     {
       title: t.skills.categories.languages,
       icon: <FaCode className="text-accent-indigo" size={24} />,
-      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C', 'HTML', 'CSS']
+      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C', 'HTML5', 'CSS3', 'SQL']
     },
     {
       title: t.skills.categories.web,
@@ -17,9 +17,14 @@ export default function Skills() {
       skills: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'Flask', 'Bootstrap', 'Tailwind CSS']
     },
     {
+      title: t.skills.categories.mobileUi,
+      icon: <FaMobileAlt className="text-pink-500" size={24} />,
+      skills: ['Android Studio', 'Figma', 'Mobile App Dev', 'Responsive UI', 'Wireframing', 'User Research']
+    },
+    {
       title: t.skills.categories.db,
       icon: <FaDatabase className="text-accent-teal" size={24} />,
-      skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Prisma ORM']
+      skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'SQL Server', 'Prisma ORM', 'SQLAlchemy']
     },
     {
       title: t.skills.categories.ai,
@@ -28,7 +33,7 @@ export default function Skills() {
         'PyTorch',
         'LangChain',
         'FAISS',
-        'Hugging Face Embeddings',
+        'Hugging Face',
         'Sentence Transformers',
         'PyPDFLoader',
         'Prompt Engineering'
@@ -36,8 +41,8 @@ export default function Skills() {
     },
     {
       title: t.skills.categories.tools,
-      icon: <FaTools className="text-slate-500 dark:text-slate-400" size={24} />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Android Studio', 'REST API Design']
+      icon: <FaTools className="text-amber-500 dark:text-amber-400" size={24} />,
+      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'REST API Design', 'Vercel', 'NPM']
     }
   ];
 

@@ -98,11 +98,6 @@ export default function About() {
                 {t.about.p3}
               </p>
             )}
-            {t.about.p4 && (
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-                {t.about.p4}
-              </p>
-            )}
           </motion.div>
 
           {/* Stats Box */}
