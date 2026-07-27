@@ -115,7 +115,7 @@ export default function Skills() {
               </div>
 
               {/* Chips container */}
-              <div className="flex flex-wrap gap-2.5 mt-auto">
+              <div className="flex flex-wrap gap-2.5 mt-auto" dir="ltr">
                 {cat.skills.map((skill, skillIdx) => (
                   <span 
                     key={skillIdx}
