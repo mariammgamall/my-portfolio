@@ -16,18 +16,20 @@ export const translations = {
       badge: "Available for Job Opportunities, Internships ,and Projects",
       greeting: "Hi, I'm",
       name: "Mariam Gamal",
-      title: "Computer Science Engineer | Software Engineering & AI",
-      taglines: ["Full-Stack Developer", "AI Engineer", "RAG Systems Builder"],
-      bio: "Specializing in Full-Stack Web Development & Applied Artificial Intelligence. Building performant monorepo ecosystems and low-latency RAG systems.",
+      title: "Software Engineer & AI Developer",
+      taglines: ["Computer Science Engineer", "Full Stack Developer", "Mobile App Developer"],
+      bio: "Building scalable web applications, cross-platform mobile apps, and AI-powered solutions with a passion for clean architecture, performance optimization, and continuous learning.",
       btnProjects: "View Projects",
       btnResume: "View Resume",
       btnContact: "Contact Me"
     },
     about: {
       title: "About Me",
-      heading: "Aspiring Computer Science & Engineering Graduate",
-      p1: "I am a Computer Science Engineering student with hands-on experience in full-stack web development and applied artificial intelligence. I focus on building robust, end-to-end web applications and high-performance backend infrastructures.",
-      p2: "My engineering background enables me to design, build, and deploy complex architectures, including Retrieval Augmented Generation (RAG) systems, database schemas, and multi-role platforms. I am highly passionate about deep learning, algorithm optimization, and clean coding architectures.",
+      heading: "Aspiring Software Engineer & AI Developer",
+      p1: "I am a Computer Science Engineering student passionate about Software Engineering, Artificial Intelligence, UI/UX Design, Full-Stack Web Development, and Mobile Application Development. I enjoy transforming ideas into scalable, user focused digital solutions by combining modern technologies with strong engineering principles.",
+      p2: "My experience includes developing responsive web applications, RESTful APIs, database design, backend architectures, and cross platform mobile applications. I also build AI-powered solutions, including Retrieval Augmented Generation (RAG) systems, and enjoy exploring machine learning, deep learning, and intelligent automation to solve real world problems.",
+      p3: "I am passionate about writing clean, maintainable, and efficient code while following best practices in software architecture and system design. I continuously learn emerging technologies, improve my problem solving skills, and strive to build applications that deliver excellent performance, scalability, and user experience.",
+      p4: "Beyond development, I enjoy collaborating on innovative projects, learning new frameworks and tools, and embracing challenges that help me grow as a software engineer. My goal is to create impactful software that combines robust engineering with intelligent technologies to make a meaningful difference.",
       stat1Label: "E-JUST Study",
       stat1Suffix: " Years",
       stat2Label: "Projects Built",
@@ -54,7 +56,7 @@ export const translations = {
         degree: "High School Diploma",
         period: "2020 - 2023",
         details: [
-          "Graduated with an outstanding GPA of 3.98 / 4.00.",
+          "Actively organized and volunteered in various school events, science fairs, and tech workshops.",
           "Active participant in scientific research exhibits, coding groups, and mathematics competitions.",
           "Maintained high honors distinction across all academic terms."
         ]
@@ -217,18 +219,20 @@ export const translations = {
       badge: "متاحة لفرص العمل، التدريب، والمشاريع",
       greeting: "أهلاً، أنا",
       name: "مريم جمال",
-      title: "مهندسة علوم حاسب | هندسة البرمجيات والذكاء الاصطناعي",
-      taglines: ["مطورة فول ستاك", "مهندسة ذكاء اصطناعي", "مبتكرة أنظمة RAG"],
-      bio: "متخصصة في تطوير برمجيات الويب المتكاملة (Full-Stack) والذكاء الاصطناعي التطبيقي. بناء أنظمة برمجية عالية الأداء وأنظمة ذكاء اصطناعي منخفضة التأخير.",
+      title: "مهندسة برمجيات ومطورة ذكاء اصطناعي",
+      taglines: ["مهندسة علوم حاسب", "مطورة فول ستاك", "مطورة تطبيقات موبايل"],
+      bio: "بناء تطبيقات ويب قابلة للتوسع، تطبيقات موبايل متعددة المنصات، وحلول مدعومة بالذكاء الاصطناعي مع شغف بالمعمارية النظيفة، تحسين الأداء، والتعلم المستمر.",
       btnProjects: "عرض المشاريع",
       btnResume: "السيرة الذاتية",
       btnContact: "تواصل معي"
     },
     about: {
       title: "نبذة عني",
-      heading: "طالبة متميزة في هندسة وعلوم الحاسب",
-      p1: "أنا طالبة في قسم هندسة وعلوم الحاسب أمتلك خبرة عملية واسعة في تطوير الويب المتكامل (Full-Stack) والذكاء الاصطناعي التطبيقي. أركز على بناء تطبيقات ويب متكاملة وقوية وبنيات تحتية برمجية عالية الأداء.",
-      p2: "تمكنني خلفيتي الهندسية من تصميم وبناء ونشر أنظمة برمجية معقدة، بما في ذلك أنظمة RAG (Retrieval-Augmented Generation)، وتصميم قواعد البيانات، والمنصات متعددة الصلاحيات. لدي شغف كبير بالتعلم العميق، تحسين الخوارزميات، وهندسة البرمجيات النظيفة.",
+      heading: "مهندسة برمجيات ومطورة ذكاء اصطناعي طموحة",
+      p1: "أنا طالبة في قسم هندسة وعلوم الحاسب بشغف كبير في هندسة البرمجيات، الذكاء الاصطناعي، تصميم واجهات المستخدم (UI/UX)، تطوير الويب المتكامل (Full-Stack)، وتطوير تطبيقات الموبايل. أستمتع بتحويل الأفكار إلى حلول رقمية قابلة للتوسع ومتمحورة حول المستخدم من خلال دمج التقنيات الحديثة مع المبادئ الهندسية القوية.",
+      p2: "تتضمن خبرتي تطوير تطبيقات الويب المتجاوبة، واجهات برمجة التطبيقات (RESTful APIs)، تصميم قواعد البيانات، البنيات التحتية الخلفية، وتطبيقات الموبايل متعددة المنصات. كما أقوم ببناء حلول مدعومة بالذكاء الاصطناعي، بما في ذلك أنظمة RAG، واستكشاف التعلم الآلي والتعلم العميق والأتمتة الذكية لحل المشكلات الواقعية.",
+      p3: "أنا شغوفة بكتابة كود نظيف، قابل للصيانة، وفعال مع اتباع أفضل الممارسات في معمارية البرمجيات وتصميم الأنظمة. أستمر دائماً في تعلم التقنيات الناشئة، وتحسين مهاراتي في حل المشكلات، وأسعى لبناء تطبيقات تقدم أداءً ممتازاً، وسلاسة، وتجربة مستخدم متميزة.",
+      p4: "بعيداً عن التطوير، أستمتع بالتعاون في المشاريع المبتكرة، وتعلم أطر العمل والأدوات الجديدة، ومواجهة التحديات التي تساعدني على النمو كمهندسة برمجيات. هدفي هو إنشاء برمجيات ذات تأثير تجمع بين الهندسة القوية والتقنيات الذكية لإحداث فارق حقيقي.",
       stat1Label: "سنوات دراسة الجامعة",
       stat1Suffix: " سنوات",
       stat2Label: "مشروع منجز",
@@ -255,7 +259,7 @@ export const translations = {
         degree: "دبلومة الثانوية الأمريكية",
         period: "2020 - 2023",
         details: [
-          "التخرج بمعدل تراكمي متميز 3.98 / 4.00.",
+          "المشاركة الفعالة في تنظيم والتطوع في الفعاليات المدرسية، المعارض العلمية، وورش العمل التقنية.",
           "مشاركة نشطة في المعارض العلمية، مجموعات البرمجة، ومسابقات الرياضيات.",
           "الحصول على مرتبة الشرف في جميع الفصول الدراسية."
         ]

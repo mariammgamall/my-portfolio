@@ -45,7 +45,7 @@ export default function About() {
     { target: 4, suffix: t.about.stat1Suffix, label: t.about.stat1Label },
     { target: 12, suffix: t.about.stat2Suffix, label: t.about.stat2Label },
     { target: 7, suffix: t.about.stat3Suffix, label: t.about.stat3Label },
-    { target: 30, suffix: t.about.stat4Suffix, label: t.about.stat4Label }
+    { target: 20, suffix: t.about.stat4Suffix, label: t.about.stat4Label }
   ];
 
   return (
@@ -93,6 +93,16 @@ export default function About() {
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
               {t.about.p2}
             </p>
+            {t.about.p3 && (
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
+                {t.about.p3}
+              </p>
+            )}
+            {t.about.p4 && (
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
+                {t.about.p4}
+              </p>
+            )}
           </motion.div>
 
           {/* Stats Box */}
