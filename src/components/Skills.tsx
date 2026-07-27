@@ -115,12 +115,12 @@ export default function Skills() {
               </div>
 
               {/* Chips container */}
-              <div className="flex flex-wrap gap-2.5 mt-auto" dir="ltr">
+              <div className="flex flex-wrap gap-2.5 mt-auto" style={{ direction: 'ltr' }}>
                 {cat.skills.map((skill, skillIdx) => (
                   <span 
                     key={skillIdx}
                     className="tech-badge"
-                    dir="ltr"
+                    style={{ direction: 'ltr' }}
                   >
                     {skill}
                   </span>
