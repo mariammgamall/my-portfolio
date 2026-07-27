@@ -120,6 +120,7 @@ export default function Skills() {
                   <span 
                     key={skillIdx}
                     className="tech-badge"
+                    dir="ltr"
                   >
                     {skill}
                   </span>

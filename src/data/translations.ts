@@ -18,7 +18,7 @@ export const translations = {
       name: "Mariam Gamal",
       title: "Software Engineer & AI Developer",
       taglines: ["Computer Science Engineer", "Full Stack Developer", "Mobile App Developer"],
-      bio: "Building scalable web applications, cross-platform mobile apps, and AI-powered solutions with a passion for clean architecture, performance optimization, and continuous learning.",
+      bio: "Building scalable web applications, cross platform mobile apps, and AI powered solutions with a passion for clean architecture, performance optimization, and continuous learning.",
       btnProjects: "View Projects",
       btnResume: "View Resume",
       btnContact: "Contact Me"
@@ -320,29 +320,29 @@ export const translations = {
           title: "اختبار البرمجيات (Software Testing)",
           company: "معهد تكنولوجيا المعلومات (ITI)",
           period: "أغسطس 2026 - الحالي",
-          desc: "إجراء إجراءات اختبار البرمجيات الشاملة لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة والتعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات، وتنفيذ حلول الاختبار الآلي."
+          desc: "إجراء اختبارات شاملة للبرمجيات لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة، والتعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات وتنفيذ حلول الاختبار الآلي."
         },
         {
           title: "دبلومة تطوير الواجهات الأمامية (Front-End Development Diploma)",
-          company: "Route Academy- IT Training Center",
+          company: "أكاديمية روت - مركز تدريب تكنولوجيا المعلومات (Route Academy)",
           period: "يونيو 2026 - الحالي",
           desc: "التدريب العملي والتطبيقي على HTML, CSS, React.js, Bootstrap, Tailwind, TypeScript, Sass, jQuery, NPM والـ JavaScript الحديثة (ES6, DOM, BOM, AJAX, Fetch API, OOP)."
         },
         {
           title: "تدريب تصميم واجهات وتجربة المستخدم (UI/UX Design Internship)",
-          company: "شركة سينتكس هاب (SyntecxHub Company)",
+          company: "شركة سينتكس هاب (SyntecxHub)",
           period: "3 يونيو – 3 يوليو 2026",
           desc: "تصميم وتطوير 4 مشاريع UI/UX عالية الدقة خلال تدريب لمدة شهر، مع تطبيق مبادئ التصميم المتمحور حول المستخدم والتنفيذ الدقيق للواجهات الأمامية؛ إنشاء النماذج الهيكلية والنماذج الأولية مما قلل وقت تكرار التطوير بنسبة 25٪ من خلال التغذية الراجعة المبكرة."
         },
         {
           title: "تدريب الذكاء الاصطناعي (AI Internship)",
-          company: "شركة ديكود لابس (Decode Labs Company)",
+          company: "شركة ديكود لابس (Decode Labs)",
           period: "1 يونيو – 1 يوليو 2026",
           desc: "العمل على مشاريع ذكاء اصطناعي تطبيقية خلال تدريب لمدة شهر، وتعزيز المهارات العملية في تطوير وتنفيذ حلول الذكاء الاصطناعي."
         },
         {
           title: "برنامج تدريب الذكاء الاصطناعي التوليدي (Generative AI Internship Program)",
-          company: "شركة هنداوي (Tips Hindawi Company)",
+          company: "شركة هنداوي (Tips Hindawi)",
           period: "ديسمبر 2025 – فبراير 2026",
           desc: "إكمال برنامج مكثف حول مفاهيم الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغة الكبيرة (LLMs) وهندسة الأوامر التطبيقية، من خلال تمارين التنفيذ العملي."
         },
