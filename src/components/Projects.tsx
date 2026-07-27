@@ -89,7 +89,8 @@ export default function Projects() {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                  draggable="false"
                   loading="lazy"
                 />
               </div>
@@ -200,7 +201,8 @@ export default function Projects() {
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                          draggable="false"
                         />
                       </div>
                       <div className="p-5 md:p-6 flex flex-col flex-1">
@@ -286,7 +288,8 @@ export default function Projects() {
                   <img 
                     src={selectedProject.image} 
                     alt={selectedProject.title} 
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top select-none"
+                    draggable="false"
                   />
                 </div>
 

@@ -238,6 +238,7 @@ export default function Certifications() {
                     src={activeCert.image} 
                     alt={activeCert.title} 
                     className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg shadow-2xl select-none"
+                    draggable="false"
                     loading="eager"
                   />
                 ) : activeCert.pdf ? (

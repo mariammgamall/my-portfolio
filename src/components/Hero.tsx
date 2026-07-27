@@ -279,7 +279,8 @@ export default function Hero({ scrollToSection }: HeroProps) {
                 <img 
                   src="/images/profile-image/mariam.jpeg" 
                   alt="Mariam Gamal" 
-                  className="w-full h-full object-cover object-center select-none"
+                  className="w-full h-full object-cover object-center select-none pointer-events-none"
+                  draggable="false"
                   loading="eager"
                 />
               </div>

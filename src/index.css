@@ -46,6 +46,16 @@
     @apply antialiased font-sans transition-colors duration-300;
   }
 
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
   [dir="rtl"] body, [dir="rtl"] {
     font-family: 'Cairo', 'Inter', sans-serif !important;
   }
