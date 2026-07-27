@@ -175,7 +175,7 @@ export const translations = {
     contact: {
       title: "Get In Touch",
       heading: "Let's discuss your next project!",
-      sub: "Whether you want to recruit me for a software development internship, discuss retrieval-augmented reasoning models, or simply chat about tech, feel free to reach out. I'm always open to new connections and collaborations.",
+      sub: "Whether you want to discuss full-stack web development, software testing automation, or practical AI applications, I'm always open to new opportunities, technical discussions, and collaborative projects. Let's build something extraordinary together!",
       phone: "Phone",
       email: "Email",
       location: "Location",
@@ -376,7 +376,7 @@ export const translations = {
     contact: {
       title: "تواصل معي",
       heading: "لنناقش مشروعك أو فرصتك القادمة!",
-      sub: "سواء كنت ترغب في توظيفي لفرصة تدريب في تطوير البرمجيات، مناقشة نماذج الذكاء الاصطناعي، أو التحدث حول التقنية، يسعدني تواصلك معي دائماً. أنا منفتحة دائماً على التواصل والتعاون المتبادل.",
+      sub: "سواء كنت ترغب في مناقشة تطوير الويب المتكامل، أتمتة اختبار البرمجيات، أو تطبيقات الذكاء الاصطناعي العملية، أنا دائماً منفتحة على الفرص الجديدة، النقاشات التقنية، والمشاريع التعاونية. لنبني شيئاً استثنائياً معاً!",
       phone: "الهاتف",
       email: "البريد الإلكتروني",
       location: "الموقع",
