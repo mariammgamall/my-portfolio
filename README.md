@@ -1,6 +1,6 @@
 # Mariam Gamal - Personal Portfolio Website
 
-A modern, professional, and visually striking personal portfolio website for **Mariam Gamal**, a Computer Science Engineering student specializing in Full-Stack Web Development and Applied AI. Built using a sleek dark/light tech aesthetic, featuring glassmorphism layouts, full Arabic/English bilingual support (RTL/LTR), performant micro-animations, and direct live contact form integration.
+A modern, professional, and visually striking personal portfolio website for **Mariam Gamal**, a Computer Science Engineering student, **Software Engineer & AI Developer**. Built using a sleek dark/light tech aesthetic, featuring glassmorphism layouts, full Arabic/English bilingual support (RTL/LTR), performant micro-animations, and direct live contact form integration.
 
 ---
 
@@ -27,36 +27,45 @@ A modern, professional, and visually striking personal portfolio website for **M
 
 1. **Hero / Landing**:
    - **Particle Network Background**: Renders a reactive canvas-based nodes network connecting dynamically.
-   - **Typewriter Effect**: Cycles through technical roles (*Full-Stack Developer*, *AI Engineer*, *RAG Systems Builder* / *مطورة فول ستاك*, *مهندسة ذكاء اصطناعي*, *مبتكرة أنظمة RAG*).
+   - **Typewriter Effect**: Cycles through technical roles (*Computer Science Engineer*, *Full Stack Developer*, *Mobile App Developer* / *مهندسة علوم حاسب*, *مطورة فول ستاك*, *مطورة تطبيقات موبايل*).
    - **Availability Tagline**: Prominently displays *"Available for Job Opportunities, Internships ,and Projects"* / *"متاحة لفرص العمل، التدريب، والمشاريع"*.
-   - **Profile Glow Avatar**: A customized circular tech-glow crop highlighting the professional profile image.
+   - **Bio Summary**: Highlights experience in building scalable web applications, cross-platform mobile apps, and AI-powered solutions.
+   - **Profile Glow Avatar**: Customized circular tech-glow crop highlighting the professional profile image.
 
 2. **Full Arabic / English Bilingual Support (RTL/LTR)**:
    - Header button **`العربية` / `English`** toggles complete website translation instantly.
    - Automatically handles `dir="rtl"` vs `dir="ltr"`, font family overrides, and element alignment across all components.
 
 3. **About Section**:
-   - Incorporates academic & engineering biographies.
-   - Features animated count-up stat counters (E-JUST study years, completed projects, internships, technical skills).
+   - Incorporates academic & software engineering overview across 3 structured paragraphs (Software Engineering, AI/RAG, Mobile Apps, UI/UX, and Clean Architecture).
+   - Features animated count-up stat counters (E-JUST study years, 12+ completed projects, 7 internships, 20+ technical skills).
 
 4. **Education & Technical Skills**:
-   - Organizes education history (E-JUST B.Sc. & El Zahraa Diploma) and technical skills into 5 category cards (Languages, Web/Frameworks, Databases, AI/ML, and Tools) with hover glowing states and interactive tech badges.
+   - **Education**: Detailed timeline for E-JUST B.Sc. and El Zahraa American Diploma with active volunteering & events.
+   - **Technical Skills**: Organizes 20+ technical skills into a balanced **6-category grid** (*Languages*, *Web & Frameworks*, *Mobile & UI/UX*, *Databases & ORMs*, *AI & Machine Learning*, *Tools & Workflow*) with explicit LTR chip badge direction rules for RTL mode.
 
 5. **Featured Projects (Top 3 Limit + All Projects Modal)**:
    - Displays 3 featured projects on the main landing grid (Full-Stack LMS Monorepo, Aura Customer Ordering System, and AI Knowledge & Reasoning Engine).
-   - **Project Details Tab/Modal**: Clicking any project card opens an interactive detail modal with full-resolution screenshots, complete tech stack badges, comprehensive project overview, and a **Live Demo** button.
-   - **View All Projects Button**: Opens a full-page modal overlay displaying the entire portfolio showcase.
+   - **Project Details Tab/Modal**: Interactive detail modal with full-resolution screenshots, complete tech stack badges, project overview, and a **Live Demo** button.
+   - **View All Projects Button**: Full-page modal overlay displaying the complete project collection.
 
 6. **Animated Experience Timeline**:
-   - Vertical timeline mapping professional internships (DEPI, Route Academy, Decode Labs, Tips Hindawi, SASEC, AMOC) with slide-up entrance animations.
+   - Includes 7 internships & diploma entries:
+     - **Information Technology Institute (ITI)** — Software Testing (Aug 2026 - Present)
+     - **Route Academy- IT Training Center** — Front-End Development Diploma (June 2026 - Present)
+     - **SyntecxHub Company** — UI/UX Design Internship (Jun 3 – Jul 3, 2026)
+     - **Decode Labs Company** — AI Internship (Jun 1 – Jul 1, 2026)
+     - **Tips Hindawi Company** — Generative AI Internship Program (Dec 2025 – Feb 2026)
+     - **Saham Al Shamal Eng’g Consultants Co. (SASEC)** — Online Training IT Intern (Jul – Aug 2025)
+     - **Alexandria Mineral Oils Company (AMOC)** — Industrial IT Intern (Sep 2024)
 
-7. **Certifications (Mobile PDF Preview Fix + All Certificates Modal)**:
-   - Displays top 3 certificates on the main landing section with a **View All Certificates** button to open the full collection.
-   - High-resolution converted PNG image previews ensuring 100% native mobile rendering on Android Chrome & iOS Safari without iframe cutoffs.
-   - Includes an optional *"Open Original PDF"* link inside the viewer modal for original document downloads.
+7. **Certifications**:
+   - Displays top 3 certificates with **View All Certificates** modal.
+   - High-resolution PNG image previews ensuring 100% native mobile rendering on Android Chrome & iOS Safari without iframe cutoffs.
+   - Includes optional *"Open Original PDF"* links inside the viewer modal.
 
 8. **Live Contact Form**:
-   - Fully activated contact form using FormSubmit API that transmits visitor messages directly to `maryamgamal188@gmail.com` with real-time submission feedback.
+   - Transmits visitor messages directly to `maryamgamal188@gmail.com` with real-time submission feedback and customized subtitle.
 
 ---
 
@@ -120,9 +129,9 @@ mariam-gamal-portfolio/
 │   │   ├── Hero.tsx            # Particle canvas & typewriter banner
 │   │   ├── About.tsx           # Bio & animated statistics counters
 │   │   ├── Education.tsx       # Degree & school details
-│   │   ├── Skills.tsx          # Technical expertise categories
+│   │   ├── Skills.tsx          # Technical expertise categories 
 │   │   ├── Projects.tsx        # Top 3 grid, project detail modal & view all modal
-│   │   ├── Experience.tsx      # Vertical internship timeline
+│   │   ├── Experience.tsx      # Vertical internship timeline 
 │   │   ├── Certifications.tsx  # Certificates preview modal & view all modal
 │   │   ├── Contact.tsx         # Contact info & FormSubmit live email form
 │   │   └── Footer.tsx          # Clean footer
