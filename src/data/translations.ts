@@ -197,7 +197,7 @@ export const translations = {
     footer: {
       logoTitle: "Mariam",
       logoTitle2: "Gamal",
-      sub: "Computer Science Engineer specializing in Full-Stack Web Development & Applied AI.",
+      sub: "Computer Science Engineer specializing in Full Stack Web Development, Mobile Applications & AI.",
       rights: "All rights reserved.",
       top: "Back to Top ↑"
     }
