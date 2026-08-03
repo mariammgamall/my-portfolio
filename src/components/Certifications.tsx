@@ -123,18 +123,19 @@ export default function Certifications() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={closeAllCertsModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
             />
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
-              className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Header */}
-              <div className="flex justify-between items-center px-6 md:px-8 py-5 border-b border-slate-100 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
+              <div className="flex justify-between items-center px-6 md:px-8 py-5 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex-shrink-0">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-xl bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal">
                     <FaAward size={18} />
@@ -152,7 +153,7 @@ export default function Certifications() {
               </div>
 
               {/* Grid Content */}
-              <div className="flex-1 overflow-y-auto p-6 md:p-8 bg-slate-50/50 dark:bg-slate-950/50">
+              <div className="flex-1 overflow-y-auto overscroll-contain p-6 md:p-8 bg-slate-50/50 dark:bg-slate-950/50 [will-change:scroll-position]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   {certificates.map((cert, idx) => (
                     <div
@@ -193,20 +194,21 @@ export default function Certifications() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={closeCertModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
-              className="relative w-full max-w-4xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-10"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full max-w-4xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Modal Header */}
-              <div className="flex justify-between items-center px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm z-10">
+              <div className="flex justify-between items-center px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white dark:bg-slate-900 flex-shrink-0 z-10">
                 <h3 className="font-display font-bold text-sm md:text-base text-slate-900 dark:text-white truncate pr-4">
                   {activeCert.title}
                 </h3>
@@ -232,7 +234,7 @@ export default function Certifications() {
               </div>
 
               {/* Image / PDF Preview Container */}
-              <div className="flex-1 bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto min-h-[350px]">
+              <div className="flex-1 bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto overscroll-contain min-h-[350px]">
                 {activeCert.image ? (
                   <img 
                     src={activeCert.image} 

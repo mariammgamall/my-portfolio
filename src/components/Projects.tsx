@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaTimes, FaLayerGroup, FaInfoCircle } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
@@ -20,6 +20,12 @@ export default function Projects() {
 
   const projects = t.projects.items as ProjectItem[];
   const displayedProjects = projects.slice(0, 3);
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   const openProjectDetails = (project: ProjectItem) => {
     setSelectedProject(project);
@@ -157,20 +163,21 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={closeAllProjectsModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
-              className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Modal Header */}
-              <div className="flex justify-between items-center px-5 md:px-8 py-4 md:py-5 border-b border-slate-100 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm gap-3">
+              <div className="flex justify-between items-center px-5 md:px-8 py-4 md:py-5 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex-shrink-0 gap-3">
                 <div className="flex items-center gap-3 min-w-0 flex-1">
                   <div className="p-2.5 rounded-xl bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal flex-shrink-0">
                     <FaLayerGroup size={18} />
@@ -189,7 +196,7 @@ export default function Projects() {
               </div>
 
               {/* Modal Content / All Projects Grid */}
-              <div className="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50/50 dark:bg-slate-950/50">
+              <div className="flex-1 overflow-y-auto overscroll-contain p-4 md:p-8 bg-slate-50/50 dark:bg-slate-950/50 [will-change:scroll-position]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   {projects.map((project) => (
                     <div
@@ -250,20 +257,21 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={closeProjectDetails}
-              className="absolute inset-0 bg-slate-950/90 backdrop-blur-md"
+              className="absolute inset-0 bg-slate-950/90 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
-              className="relative w-full max-w-3xl max-h-[88vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full max-w-3xl max-h-[88vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Modal Header */}
-              <div className="flex justify-between items-start gap-3 px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md">
+              <div className="flex justify-between items-start gap-3 px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white dark:bg-slate-900 flex-shrink-0">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 min-w-0 flex-1">
                   <span className="w-fit text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
                     {selectedProject.year}
@@ -282,7 +290,7 @@ export default function Projects() {
               </div>
 
               {/* Modal Body */}
-              <div className="flex-1 overflow-y-auto p-5 md:p-8 space-y-6 text-start">
+              <div className="flex-1 overflow-y-auto overscroll-contain p-5 md:p-8 space-y-6 text-start [will-change:scroll-position]">
                 {/* Project Cover Image - Edge to Edge Image Display */}
                 <div className="w-full h-56 sm:h-72 md:h-80 relative rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-800/60 shadow-lg">
                   <img 
@@ -303,7 +311,7 @@ export default function Projects() {
                 {/* Tech Stack Chips */}
                 <div>
                   <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2.5">
-                    Technologies & Tools
+                    {t.projects.techStackTitle || 'Technologies & Tools'}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tech.map((tItem, tIdx) => (
@@ -320,7 +328,7 @@ export default function Projects() {
                 {/* Description */}
                 <div>
                   <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
-                    Overview
+                    {t.projects.overviewTitle || 'Overview'}
                   </h4>
                   <p className="text-slate-650 dark:text-slate-300 text-sm md:text-base leading-relaxed whitespace-pre-line">
                     {selectedProject.description}

@@ -80,6 +80,8 @@ export const translations = {
       viewDetails: "View Details",
       liveDemo: "Live Demo",
       close: "Close",
+      techStackTitle: "Technologies & Tools",
+      overviewTitle: "Overview",
       items: [
         {
           id: 1,
@@ -283,6 +285,8 @@ export const translations = {
       viewDetails: "عرض التفاصيل",
       liveDemo: "المعاينة المباشرة",
       close: "إغلاق",
+      techStackTitle: "التقنيات والأدوات",
+      overviewTitle: "نظرة عامة",
       items: [
         {
           id: 1,
