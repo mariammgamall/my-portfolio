@@ -157,7 +157,7 @@ export default function Projects() {
       {/* All Projects Page Modal (z-[100] above fixed navbar) */}
       <AnimatePresence>
         {showAllModal && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 md:p-8 pt-16 sm:pt-20">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 md:p-6 pt-20 sm:pt-24 pb-4 sm:pb-8">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -174,7 +174,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="relative w-full max-w-6xl max-h-[85vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
+              className="relative w-full max-w-6xl max-h-[80vh] sm:max-h-[82vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Modal Header */}
               <div className="flex justify-between items-center px-5 md:px-8 py-4 md:py-5 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex-shrink-0 gap-3">
@@ -251,7 +251,7 @@ export default function Projects() {
       {/* Project Details Modal / Tab (z-[110] above all) */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-6 pt-16 sm:pt-20 overflow-hidden">
+          <div className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-6 pt-20 sm:pt-24 pb-4 sm:pb-8 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -268,7 +268,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 12 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="relative w-full max-w-3xl max-h-[88vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
+              className="relative w-full max-w-3xl max-h-[80vh] sm:max-h-[82vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-10 [backface-visibility:hidden] [transform:translate3d(0,0,0)]"
             >
               {/* Modal Header */}
               <div className="flex justify-between items-start gap-3 px-5 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-white dark:bg-slate-900 flex-shrink-0">
