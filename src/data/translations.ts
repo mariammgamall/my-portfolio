@@ -103,6 +103,42 @@ export const translations = {
         },
         {
           id: 3,
+          title: "IntellMeet — AI Enterprise Meeting Platform",
+          year: "2026",
+          tech: ["React 19", "Node.js", "Express", "WebRTC", "Socket.io", "MongoDB", "Redis", "OpenAI"],
+          description: "AI-powered enterprise meeting & collaboration platform featuring real-time WebRTC mesh video, automated post-meeting AI summaries, action-item extraction, interactive Kanban task sync, and team productivity analytics.",
+          demoLink: "https://mariam-intellmeet.vercel.app/",
+          image: "/images/projects-images/intellmeet-project-image.png"
+        },
+        {
+          id: 4,
+          title: "The UX Review Blog - Neubrutalism Landing Page",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "Flexbox", "Responsive Design", "FontAwesome"],
+          description: "Modern Neubrutalist blog landing page recreated using pure HTML5 and vanilla CSS in a bold Neubrutalism visual style with standard Flexbox layouts, position properties, sticky sidebar, author cards, and responsive media queries.",
+          demoLink: "https://neubrutalism-landing-page.vercel.app/",
+          image: "/images/projects-images/uxreview-project-image.png"
+        },
+        {
+          id: 5,
+          title: "DJI Mavic 4 Pro - Drone Product Landing Page",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "FontAwesome"],
+          description: "Sleek, high-converting product landing page for the DJI Mavic 4 Pro drone. Built with pure HTML5 & CSS3 featuring a dark theme, interactive specs comparison matrix, customer rating breakdowns, and related product cards.",
+          demoLink: "https://mariam-drone-product-landing-page.vercel.app/",
+          image: "/images/projects-images/droneproduct-project-image.png"
+        },
+        {
+          id: 6,
+          title: "Mudabbir (مدبّر) - Personal Financial Dashboard",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "CSS Grid", "Flexbox", "RTL Arabic", "3D Transforms"],
+          description: "Personal finance management dashboard to track expenses, monitor category budgets, analyze weekly income vs expenses, and manage monthly bills. Built with Pure HTML5 & CSS3 with full RTL Arabic support and 3D CSS flip cards.",
+          demoLink: "https://mariam-mudabbir-financial-dashboard.vercel.app/",
+          image: "/images/projects-images/muddabir-project-image.png"
+        },
+        {
+          id: 7,
           title: "AI Knowledge & Reasoning Engine",
           year: "2025",
           tech: ["Python", "LangChain", "FAISS", "Hugging Face", "PyTorch", "Embeddings"],
@@ -308,6 +344,42 @@ export const translations = {
         },
         {
           id: 3,
+          title: "منصة IntellMeet للاجتماعات الذكية",
+          year: "2026",
+          tech: ["React 19", "Node.js", "Express", "WebRTC", "Socket.io", "MongoDB", "Redis", "OpenAI"],
+          description: "منصة اجتماعات وتعاون ذكية للمؤسسات مدعومة بالذكاء الاصطناعي تتميز ببث فيديو مباشر بتقنية WebRTC، ملخصات اجتماعات آلية بالذكاء الاصطناعي، استخراج مهام العمل، محادثة فورية، لوحة كانبان تفاعلية، وتحليلات إنتاجية الفريق.",
+          demoLink: "https://mariam-intellmeet.vercel.app/",
+          image: "/images/projects-images/intellmeet-project-image.png"
+        },
+        {
+          id: 4,
+          title: "مدونة The UX Review - صفحة هبوط بنمط نيوبروتاليزم",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "Flexbox", "Responsive Design", "FontAwesome"],
+          description: "صفحة هبوط حديثة لمدونة UX Review تمت إعادتها باستخدام HTML5 و CSS3 النقي بأسلوب نيوبروتاليزم (Neubrutalism) عصري وجريء، مع تخطيطات Flexbox وشريط جانبي ثابت وبطاقات للكتاب وتصميم متجاوب كلياً.",
+          demoLink: "https://neubrutalism-landing-page.vercel.app/",
+          image: "/images/projects-images/uxreview-project-image.png"
+        },
+        {
+          id: 5,
+          title: "طائرة DJI Mavic 4 Pro - صفحة هبوط منتج",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "FontAwesome"],
+          description: "صفحة هبوط جذابة وعالية التحويل لمنتج طائرة الدرون DJI Mavic 4 Pro. تم بناؤها باستخدام HTML5 و CSS3 بتصميم داكن أنيق، جدول مقارنة تفاعلي للمواصفات، تقييمات تفصيلية، ومراجعات العملاء وتصفح الملحقات.",
+          demoLink: "https://mariam-drone-product-landing-page.vercel.app/",
+          image: "/images/projects-images/droneproduct-project-image.png"
+        },
+        {
+          id: 6,
+          title: "نظام مدبّر (Mudabbir) - لوحة تحكم مالية شخصية",
+          year: "2026",
+          tech: ["HTML5", "CSS3", "CSS Grid", "Flexbox", "RTL Arabic", "3D Transforms"],
+          description: "لوحة تحكم لإدارة المالية الشخصية تساعد في تتبع المصروفات، مراقبة الميزانيات، تحليل الدخل مقابل المصروفات، وإدارة الفواتير الشهرية. تم بناؤها باستخدام HTML5 و CSS3 الصافي مع دعم كامل للغة العربية وتأثيرات 3D تفاعلية.",
+          demoLink: "https://mariam-mudabbir-financial-dashboard.vercel.app/",
+          image: "/images/projects-images/muddabir-project-image.png"
+        },
+        {
+          id: 7,
           title: "محرك المعرفة والاستنتاج بالذكاء الاصطناعي",
           year: "2025",
           tech: ["Python", "LangChain", "FAISS", "Hugging Face", "PyTorch", "Embeddings"],
