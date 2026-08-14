@@ -203,6 +203,7 @@ export const translations = {
       openPdf: "Open Original PDF",
       close: "Close",
       items: [
+        { title: "ITI Software Testing Certificate (ISTQB Foundation Level V4.0)", issuer: "ITI MaharaTech", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png", pdf: "/certificates/ITI - Software Testing Mahara Tech Certificate.pdf" },
         { title: "Syntecx Hub UI/UX Design Internship Certificate", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" },
         { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
         { title: "Generative AI Internship Certificate", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
@@ -444,6 +445,7 @@ export const translations = {
       openPdf: "فتح ملف PDF الأصلي",
       close: "إغلاق",
       items: [
+        { title: "شهادة اختبار البرمجيات من ITI (مستوى ISTQB الأساسي V4.0)", issuer: "معهد تكنولوجيا المعلومات ITI - مهارة تك", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png", pdf: "/certificates/ITI - Software Testing Mahara Tech Certificate.pdf" },
         { title: "شهادة تدريب UI/UX Design", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" },
         { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
         { title: "شهادة تدريب الذكاء الاصطناعي التوليدي", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
