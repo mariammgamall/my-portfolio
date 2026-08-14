@@ -66,7 +66,7 @@ export const translations = {
       categories: {
         languages: "Languages",
         web: "Web & Frameworks",
-        mobileUi: "Mobile, Design & UI/UX",
+        mobileUi: "Mobile & UI/UX Design",
         db: "Databases & ORMs",
         ai: "AI & Machine Learning",
         tools: "Tools & Productivity"
