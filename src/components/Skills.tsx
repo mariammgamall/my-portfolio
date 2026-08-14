@@ -19,7 +19,7 @@ export default function Skills() {
     {
       title: t.skills.categories.mobileUi,
       icon: <FaMobileAlt className="text-pink-500" size={24} />,
-      skills: ['Android Studio', 'Figma', 'Mobile App Dev', 'Responsive UI', 'Wireframing', 'User Research']
+      skills: ['Android Studio', 'Figma', 'Canva', 'Adobe Photoshop', 'AI-Powered Tools', 'Responsive UI', 'Wireframing', 'User Research']
     },
     {
       title: t.skills.categories.db,
@@ -42,7 +42,7 @@ export default function Skills() {
     {
       title: t.skills.categories.tools,
       icon: <FaTools className="text-amber-500 dark:text-amber-400" size={24} />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'REST API Design', 'Vercel', 'NPM']
+      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'REST API Design', 'Vercel', 'Data Entry', 'Data Management', 'Microsoft Word', 'Microsoft Excel', 'Microsoft PowerPoint']
     }
   ];
 

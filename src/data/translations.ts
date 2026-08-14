@@ -66,10 +66,10 @@ export const translations = {
       categories: {
         languages: "Languages",
         web: "Web & Frameworks",
-        mobileUi: "Mobile & UI/UX",
+        mobileUi: "Mobile, Design & UI/UX",
         db: "Databases & ORMs",
         ai: "AI & Machine Learning",
-        tools: "Tools & Workflow"
+        tools: "Tools & Productivity"
       }
     },
     projects: {
@@ -307,10 +307,10 @@ export const translations = {
       categories: {
         languages: "لغات البرمجة",
         web: "الويب وأطر العمل",
-        mobileUi: "الموبايل وتصميم الواجهات",
+        mobileUi: "الموبايل وتصميم الواجهات (UI/UX)",
         db: "قواعد البيانات",
         ai: "الذكاء الاصطناعي والتعلم الآلي",
-        tools: "الأدوات وبيئة العمل"
+        tools: "الأدوات والإنتاجية"
       }
     },
     projects: {
