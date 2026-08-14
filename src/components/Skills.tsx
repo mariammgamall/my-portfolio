@@ -42,7 +42,7 @@ export default function Skills() {
     {
       title: t.skills.categories.tools,
       icon: <FaTools className="text-amber-500 dark:text-amber-400" size={24} />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'REST API Design', 'Vercel', 'Data Entry', 'Data Management', 'Microsoft Word', 'Microsoft Excel', 'Microsoft PowerPoint']
+      skills: ['Git', 'GitHub', 'VS Code', 'REST API Design', 'Vercel', 'Data Entry', 'Data Management', 'Microsoft Word', 'Microsoft Excel', 'Microsoft PowerPoint']
     }
   ];
 
@@ -115,7 +115,7 @@ export default function Skills() {
               </div>
 
               {/* Chips container */}
-              <div className="flex flex-wrap gap-2.5 mt-auto" style={{ direction: 'ltr' }}>
+              <div className="flex flex-wrap gap-2.5 flex-1 content-start" style={{ direction: 'ltr' }}>
                 {cat.skills.map((skill, skillIdx) => (
                   <span 
                     key={skillIdx}
