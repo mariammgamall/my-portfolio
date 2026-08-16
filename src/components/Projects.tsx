@@ -26,6 +26,7 @@ export default function Projects() {
   const { t } = useLanguage();
 
   const projects = (t.projects.items as ProjectItem[]) || [];
+  const displayedProjects = projects.slice(0, 3);
 
   const categories: CategoryFilter[] = (t.projects.categories as CategoryFilter[]) || [
     { id: 'all', label: 'All' },
@@ -34,7 +35,7 @@ export default function Projects() {
     { id: 'aiml', label: 'AI/ML' },
   ];
 
-  const filteredProjects = projects.filter((project) => {
+  const modalFilteredProjects = projects.filter((project) => {
     if (activeCategory === 'all') return true;
     return project.categories?.includes(activeCategory);
   });
@@ -58,6 +59,7 @@ export default function Projects() {
   };
 
   const openAllProjectsModal = () => {
+    setActiveCategory('all');
     setShowAllModal(true);
     document.body.style.overflow = 'hidden';
   };
@@ -76,7 +78,7 @@ export default function Projects() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,105 +97,70 @@ export default function Projects() {
           />
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex justify-center items-center mb-12 sm:mb-16 px-2">
-          <div className="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md shadow-md sm:shadow-lg">
-            {categories.map((cat) => {
-              const isActive = activeCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-colors duration-200 cursor-pointer select-none ${
-                    isActive
-                      ? 'text-white'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/60 dark:hover:bg-slate-800/60'
-                  }`}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeCategoryTab"
-                      className="absolute inset-0 bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal rounded-xl -z-10 shadow-md shadow-accent-indigo/20"
-                      transition={{ type: 'spring', stiffness: 380, damping: 28 }}
-                    />
-                  )}
-                  <span>{cat.label}</span>
-                </button>
-              );
-            })}
-          </div>
+        {/* Main Projects Grid - 3 items featured */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {displayedProjects.map((project, idx) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              whileHover={{ y: -8 }}
+              onClick={() => openProjectDetails(project)}
+              className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer bg-white dark:bg-slate-900"
+            >
+              {/* Card image header - Edge-to-edge image cover */}
+              <div className="w-full h-48 sm:h-56 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                  draggable="false"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Card body */}
+              <div className="p-6 md:p-8 flex flex-col flex-1">
+                {/* Header row */}
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-xs font-mono font-bold px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                    {project.year}
+                  </span>
+                </div>
+
+                <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white mb-3 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mb-6 flex-1 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tech chips */}
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {project.tech.map((tItem, tIdx) => (
+                    <span 
+                      key={tIdx}
+                      className="text-[10px] md:text-xs px-2.5 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800/60 text-slate-600 dark:text-slate-350 border border-slate-200/40 dark:border-slate-800/40"
+                    >
+                      {tItem}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Footer Action */}
+                <div className="flex items-center justify-between mt-auto border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                  <span className="flex items-center gap-2 text-xs md:text-sm font-bold text-accent-indigo dark:text-accent-teal group-hover:underline">
+                    <FaInfoCircle size={14} />
+                    {t.projects.viewDetails}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Projects Grid */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[350px]"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.92, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.92, y: -20 }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
-                whileHover={{ y: -8 }}
-                onClick={() => openProjectDetails(project)}
-                className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 relative overflow-hidden group shadow-lg hover:shadow-2xl hover:shadow-accent-indigo/10 transition-all duration-300 cursor-pointer bg-white dark:bg-slate-900"
-              >
-                {/* Card image header - Edge-to-edge image cover */}
-                <div className="w-full h-48 sm:h-56 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
-                    draggable="false"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Card body */}
-                <div className="p-6 md:p-8 flex flex-col flex-1">
-                  {/* Header row */}
-                  <div className="flex justify-between items-start mb-4">
-                    <span className="text-xs font-mono font-bold px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
-                      {project.year}
-                    </span>
-                  </div>
-
-                  <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white mb-3 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mb-6 flex-1 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  {/* Tech chips */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {project.tech.map((tItem, tIdx) => (
-                      <span 
-                        key={tIdx}
-                        className="text-[10px] md:text-xs px-2.5 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800/60 text-slate-600 dark:text-slate-350 border border-slate-200/40 dark:border-slate-800/40"
-                      >
-                        {tItem}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Footer Action */}
-                  <div className="flex items-center justify-between mt-auto border-t border-slate-100 dark:border-slate-800/60 pt-4">
-                    <span className="flex items-center gap-2 text-xs md:text-sm font-bold text-accent-indigo dark:text-accent-teal group-hover:underline">
-                      <FaInfoCircle size={14} />
-                      {t.projects.viewDetails}
-                    </span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
 
         {/* View All Projects Button */}
         <div className="mt-16 text-center">
@@ -250,51 +217,87 @@ export default function Projects() {
 
               {/* Modal Content / All Projects Grid */}
               <div className="flex-1 overflow-y-auto overscroll-contain p-4 md:p-8 bg-slate-50/50 dark:bg-slate-950/50 [will-change:scroll-position]">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {projects.map((project) => (
-                    <div
-                      key={project.id}
-                      onClick={() => openProjectDetails(project)}
-                      className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
-                    >
-                      <div className="w-full h-48 sm:h-52 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
-                          draggable="false"
-                        />
-                      </div>
-                      <div className="p-5 md:p-6 flex flex-col flex-1">
-                        <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 self-start mb-3">
-                          {project.year}
-                        </span>
-                        <h4 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
-                          {project.title}
-                        </h4>
-                        <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed mb-4 flex-1 line-clamp-3">
-                          {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          {project.tech.map((tItem, tIdx) => (
-                            <span 
-                              key={tIdx}
-                              className="text-[10px] px-2 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-350"
-                            >
-                              {tItem}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
-                          <span className="flex items-center gap-2 text-xs font-bold text-accent-indigo dark:text-accent-teal">
-                            <FaInfoCircle size={12} />
-                            {t.projects.viewDetails}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                {/* Category Filter Tabs inside Modal */}
+                <div className="flex justify-center items-center mb-6 md:mb-8 px-2">
+                  <div className="inline-flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md shadow-sm">
+                    {categories.map((cat) => {
+                      const isActive = activeCategory === cat.id;
+                      return (
+                        <button
+                          key={cat.id}
+                          onClick={() => setActiveCategory(cat.id)}
+                          className={`relative px-4 sm:px-5 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-colors duration-200 cursor-pointer select-none ${
+                            isActive
+                              ? 'text-white'
+                              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/60 dark:hover:bg-slate-800/60'
+                          }`}
+                        >
+                          {isActive && (
+                            <motion.div
+                              layoutId="modalActiveCategoryTab"
+                              className="absolute inset-0 bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal rounded-xl -z-10 shadow-md shadow-accent-indigo/20"
+                              transition={{ type: 'spring', stiffness: 380, damping: 28 }}
+                            />
+                          )}
+                          <span>{cat.label}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
+
+                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[300px]">
+                  <AnimatePresence mode="popLayout">
+                    {modalFilteredProjects.map((project) => (
+                      <motion.div
+                        key={project.id}
+                        layout
+                        initial={{ opacity: 0, scale: 0.92, y: 15 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.92, y: -15 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                        onClick={() => openProjectDetails(project)}
+                        className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
+                      >
+                        <div className="w-full h-48 sm:h-52 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
+                          <img 
+                            src={project.image} 
+                            alt={project.title} 
+                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                            draggable="false"
+                          />
+                        </div>
+                        <div className="p-5 md:p-6 flex flex-col flex-1">
+                          <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 self-start mb-3">
+                            {project.year}
+                          </span>
+                          <h4 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
+                            {project.title}
+                          </h4>
+                          <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed mb-4 flex-1 line-clamp-3">
+                            {project.description}
+                          </p>
+                          <div className="flex flex-wrap gap-1.5 mb-4">
+                            {project.tech.map((tItem, tIdx) => (
+                              <span 
+                                key={tIdx}
+                                className="text-[10px] px-2 py-0.5 font-semibold rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-350"
+                              >
+                                {tItem}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span className="flex items-center gap-2 text-xs font-bold text-accent-indigo dark:text-accent-teal">
+                              <FaInfoCircle size={12} />
+                              {t.projects.viewDetails}
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
               </div>
             </motion.div>
           </div>
