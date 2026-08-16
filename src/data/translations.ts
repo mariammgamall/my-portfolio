@@ -161,7 +161,7 @@ export const translations = {
         },
         {
           id: 9,
-          title: "Golden Clutch Chicken — Sports-Themed Fried Chicken Web App",
+          title: "Golden Clutch Chicken — Sports Themed Fried Chicken Web page",
           year: "2026",
           categories: ["frontend"],
           tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "GSAP", "ScrollTrigger", "HTML5 Canvas"],
