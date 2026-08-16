@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaAward, FaTimes, FaExternalLinkAlt, FaAward as FaAwardIcon, FaSearch } from 'react-icons/fa';
+import { FaAward, FaTimes, FaAward as FaAwardIcon, FaSearch } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Certifications() {
-  const [activeCert, setActiveCert] = useState<{ title: string; image: string; pdf?: string } | null>(null);
+  const [activeCert, setActiveCert] = useState<{ title: string; image: string } | null>(null);
   const [showAllModal, setShowAllModal] = useState(false);
 
   const { t } = useLanguage();
@@ -13,7 +13,7 @@ export default function Certifications() {
   // Display first 6 certificates on main page (2 rows of 3 columns)
   const displayedCerts = certificates.slice(0, 6);
 
-  const openCertModal = (cert: { title: string; image: string; pdf?: string }) => {
+  const openCertModal = (cert: { title: string; image: string }) => {
     setActiveCert(cert);
     document.body.style.overflow = 'hidden';
   };
@@ -239,28 +239,15 @@ export default function Certifications() {
                 <h3 className="font-display font-bold text-sm md:text-base text-slate-900 dark:text-white truncate pr-4">
                   {activeCert.title}
                 </h3>
-                <div className="flex items-center gap-2">
-                  {activeCert.pdf && (
-                    <a
-                      href={activeCert.pdf}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent-indigo/10 dark:bg-accent-teal/10 text-accent-indigo dark:text-accent-teal text-xs font-bold hover:bg-accent-indigo/20 transition-colors"
-                    >
-                      <FaExternalLinkAlt size={12} />
-                      <span>{t.certifications.openPdf}</span>
-                    </a>
-                  )}
-                  <button
-                    onClick={closeCertModal}
-                    className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
-                  >
-                    <FaTimes size={16} />
-                  </button>
-                </div>
+                <button
+                  onClick={closeCertModal}
+                  className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+                >
+                  <FaTimes size={16} />
+                </button>
               </div>
 
-              {/* Image / PDF Preview Container */}
+              {/* Image Preview Container */}
               <div className="flex-1 bg-slate-100 dark:bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto overscroll-contain min-h-[350px]">
                 {activeCert.image ? (
                   <img 
@@ -270,17 +257,9 @@ export default function Certifications() {
                     draggable="false"
                     loading="eager"
                   />
-                ) : activeCert.pdf ? (
-                  <div className="w-full h-full flex flex-col items-center justify-center">
-                    <iframe
-                      src={`${activeCert.pdf}#view=FitH`}
-                      title={activeCert.title}
-                      className="w-full h-[60vh] md:h-[70vh] rounded-lg shadow-2xl border-0 bg-white"
-                    />
-                  </div>
                 ) : (
                   <div className="text-slate-400 text-center py-12">
-                    <p>No preview image or PDF available.</p>
+                    <p>No preview image available.</p>
                   </div>
                 )}
               </div>

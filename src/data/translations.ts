@@ -233,17 +233,16 @@ export const translations = {
       viewAll: "View All Certificates",
       allModalTitle: "All Certifications",
       viewCert: "View Certificate",
-      openPdf: "Open Original PDF",
       close: "Close",
       items: [
-        { title: "ITI Software Testing Certificate (ISTQB Foundation Level V4.0)", issuer: "ITI MaharaTech", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png", pdf: "/certificates/ITI - Software Testing Mahara Tech Certificate.pdf" },
-        { title: "Syntecx Hub UI/UX Design Internship Certificate", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" },
-        { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
-        { title: "Generative AI Internship Certificate", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
-        { title: "SASEC CS Internship Certificate", issuer: "SASEC", image: "/certificates/SASEC CS Internship Certificate.png", pdf: "/certificates/SASEC CS Internship Certificate.pdf" },
-        { title: "AMOC Industrial IT Training Certificate", issuer: "AMOC", image: "/certificates/AMOC Industrial IT Training Certificate.png", pdf: "/certificates/AMOC Industrial IT Training Certificate.pdf" },
-        { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png", pdf: "/certificates/EF SET C2 Proficient Certificate.pdf" },
-        { title: "Elements of AI", issuer: "University of Helsinki & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png", pdf: "" }
+        { title: "ITI Software Testing Certificate (ISTQB Foundation Level V4.0)", issuer: "ITI MaharaTech", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png" },
+        { title: "Syntecx Hub UI/UX Design Internship Certificate", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png" },
+        { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png" },
+        { title: "Generative AI Internship Certificate", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png" },
+        { title: "SASEC CS Internship Certificate", issuer: "SASEC", image: "/certificates/SASEC CS Internship Certificate.png" },
+        { title: "AMOC Industrial IT Training Certificate", issuer: "AMOC", image: "/certificates/AMOC Industrial IT Training Certificate.png" },
+        { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png" },
+        { title: "Elements of AI", issuer: "University of Helsinki & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png" }
       ]
     },
     contact: {
@@ -508,17 +507,16 @@ export const translations = {
       viewAll: "عرض جميع الشهادات",
       allModalTitle: "جميع الشهادات والاعتمادات",
       viewCert: "عرض الشهادة",
-      openPdf: "فتح ملف PDF الأصلي",
       close: "إغلاق",
       items: [
-        { title: "شهادة اختبار البرمجيات من ITI (مستوى ISTQB الأساسي V4.0)", issuer: "معهد تكنولوجيا المعلومات ITI - مهارة تك", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png", pdf: "/certificates/ITI - Software Testing Mahara Tech Certificate.pdf" },
-        { title: "شهادة تدريب UI/UX Design", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png", pdf: "/certificates/Syntecx Hub UIUX Design Internship Certificate.pdf" },
-        { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png", pdf: "/certificates/DecodeLabs Internship Certificate.pdf" },
-        { title: "شهادة تدريب الذكاء الاصطناعي التوليدي", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png", pdf: "/certificates/Generative AI Internship Certificate - Tips Hindawi.pdf" },
-        { title: "شهادة تدريب SASEC في علوم الحاسب", issuer: "مؤسسة SASEC", image: "/certificates/SASEC CS Internship Certificate.png", pdf: "/certificates/SASEC CS Internship Certificate.pdf" },
-        { title: "شهادة التدريب الصناعي - AMOC", issuer: "شركة أموك (AMOC)", image: "/certificates/AMOC Industrial IT Training Certificate.png", pdf: "/certificates/AMOC Industrial IT Training Certificate.pdf" },
-        { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png", pdf: "/certificates/EF SET C2 Proficient Certificate.pdf" },
-        { title: "Elements of AI", issuer: "جامعة هلسنكي & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png", pdf: "" }
+        { title: "شهادة اختبار البرمجيات من ITI (مستوى ISTQB الأساسي V4.0)", issuer: "معهد تكنولوجيا المعلومات ITI - مهارة تك", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png" },
+        { title: "شهادة تدريب UI/UX Design", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png" },
+        { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png" },
+        { title: "شهادة تدريب الذكاء الاصطناعي التوليدي", issuer: "Tips Hindawi", image: "/certificates/Generative AI Internship Certificate - Tips Hindawi.png" },
+        { title: "شهادة تدريب SASEC في علوم الحاسب", issuer: "مؤسسة SASEC", image: "/certificates/SASEC CS Internship Certificate.png" },
+        { title: "شهادة التدريب الصناعي - AMOC", issuer: "شركة أموك (AMOC)", image: "/certificates/AMOC Industrial IT Training Certificate.png" },
+        { title: "EF SET C2 Proficient (77/100)", issuer: "EF SET", image: "/certificates/EF SET C2 Proficient Certificate.png" },
+        { title: "Elements of AI", issuer: "جامعة هلسنكي & MinnaLearn", image: "/certificates/Elements of AI - University of Helsinki & MinnaLearn.png" }
       ]
     },
     contact: {
