@@ -160,6 +160,16 @@ export const translations = {
           image: "/images/projects-images/muddabir-project-image.png"
         },
         {
+          id: 9,
+          title: "Golden Clutch Chicken — Sports-Themed Fried Chicken Web App",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "GSAP", "ScrollTrigger", "HTML5 Canvas"],
+          description: "Interactive sports-themed fried chicken web application featuring custom GSAP ScrollTrigger animations, HTML5 Canvas golden ember particle simulation, 3D tilt-on-hover stage, live menu search & spice level filtering, full-featured slide-over cart drawer, and championship checkout modal with animated confetti.",
+          demoLink: "https://golden-clutch-landing-page.vercel.app/",
+          image: "/images/projects-images/golden-clutch-project-image.png"
+        },
+        {
           id: 8,
           title: "AI Knowledge & Reasoning Engine",
           year: "2025",
@@ -423,6 +433,16 @@ export const translations = {
           description: "لوحة تحكم لإدارة المالية الشخصية تساعد في تتبع المصروفات، مراقبة الميزانيات، تحليل الدخل مقابل المصروفات، وإدارة الفواتير الشهرية. تم بناؤها باستخدام HTML5 و CSS3 الصافي مع دعم كامل للغة العربية وتأثيرات 3D تفاعلية.",
           demoLink: "https://mariam-mudabbir-financial-dashboard.vercel.app/",
           image: "/images/projects-images/muddabir-project-image.png"
+        },
+        {
+          id: 9,
+          title: "Golden Clutch Chicken — تطبيق وجبات تفاعلي بطابع رياضي",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "GSAP", "ScrollTrigger", "HTML5 Canvas"],
+          description: "تطبيق ويب تفاعلي ومبتكر لمطعم وجبات دجاج سريعة بطابع رياضي حماسي، يتميز بتحريكات GSAP ScrollTrigger، محاكاة جزيئات النار على HTML5 Canvas، تصفية الوجبات والبحث الفوري حسب مستوى التوابل، سلة شراء جانبية منزلقة، ونظام إتمام طلبات تفاعلي مع تأثيرات احتفالية.",
+          demoLink: "https://golden-clutch-landing-page.vercel.app/",
+          image: "/images/projects-images/golden-clutch-project-image.png"
         },
         {
           id: 8,
