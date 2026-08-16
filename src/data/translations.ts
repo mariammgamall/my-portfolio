@@ -105,7 +105,7 @@ export const translations = {
           id: 3,
           title: "CareSync — Enterprise Hospital Management System (HMS)",
           year: "2026",
-          tech: ["React.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
+          tech: ["React.js", "Express.js", "JavaScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
           description: "Production-ready enterprise Hospital Management System featuring 8 role-based access control (RBAC) workflows (Admin, Doctor, Nurse, Receptionist, Pharmacist, Lab Tech, Billing, Patient), real-time pharmacy inventory, pathology diagnostic test reports, bed allocation grid, temporal appointment scheduling, certified 1-page stamped printables, and analytics dashboard.",
           demoLink: "https://mariam-hms-portal.vercel.app/",
           image: "/images/projects-images/hms-project-image.png"
@@ -356,7 +356,7 @@ export const translations = {
           id: 3,
           title: "نظام كيرسينك لإدارة المستشفيات (HMS)",
           year: "2026",
-          tech: ["React.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
+          tech: ["React.js", "Express.js", "JavaScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
           description: "نظام إداري متكامل للمستشفيات يتميز بـ 8 أدوار مستخدمين (أدمن، أطباء، تمريض، استقبال، صيدلة، مختبر، فواتير، ومرضى)، إدارة المخزون والدواء، التقارير الطبية المختبرية، نظام حجز المواعيد وتتبع الأسِرّة، وطباعة النماذج الرسمية المعاطاة بختم طبي مع لوحة تحليلات تفاعلية.",
           demoLink: "https://mariam-hms-portal.vercel.app/",
           image: "/images/projects-images/hms-project-image.png"

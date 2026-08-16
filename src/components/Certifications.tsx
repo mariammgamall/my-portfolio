@@ -10,7 +10,7 @@ export default function Certifications() {
   const { t } = useLanguage();
   const certificates = t.certifications.items;
 
-  // Display first 6 certificates on main page (2 rows of 3 columns, matching screenshot)
+  // Display first 6 certificates on main page (2 rows of 3 columns)
   const displayedCerts = certificates.slice(0, 6);
 
   const openCertModal = (cert: { title: string; image: string; pdf?: string }) => {
@@ -63,7 +63,7 @@ export default function Certifications() {
           />
         </div>
 
-        {/* Certifications Grid (3 columns layout matching screenshot) */}
+        {/* Certifications Grid (3 columns layout) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {displayedCerts.map((cert, idx) => (
             <motion.div
