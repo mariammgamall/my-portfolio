@@ -89,7 +89,7 @@ export const translations = {
           year: "2026",
           tech: ["Next.js 15", "Express.js", "TypeScript", "Prisma", "PostgreSQL (Neon)", "Vercel"],
           description: "Production-grade monorepo LMS with a Next.js 15 App Router frontend and Express + TypeScript + Prisma backend, deployed on Vercel with live Neon PostgreSQL. Implemented 5 specialized user roles (Admin, Doctor, TA, Student, Support Agent), full Arabic/English RTL/LTR switching, and a custom glassmorphic design system with micro-animations.",
-          demoLink: "https://mariam-lms-portal-pink.vercel.app/",
+          demoLink: "https://mariam-lms-portal.vercel.app/",
           image: "/images/projects-images/lms-project-image.png"
         },
         {
@@ -103,6 +103,15 @@ export const translations = {
         },
         {
           id: 3,
+          title: "CareSync — Enterprise Hospital Management System (HMS)",
+          year: "2026",
+          tech: ["React.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
+          description: "Production-ready enterprise Hospital Management System featuring 8 role-based access control (RBAC) workflows (Admin, Doctor, Nurse, Receptionist, Pharmacist, Lab Tech, Billing, Patient), real-time pharmacy inventory, pathology diagnostic test reports, bed allocation grid, temporal appointment scheduling, certified 1-page stamped printables, and analytics dashboard.",
+          demoLink: "https://mariam-hms-portal.vercel.app/",
+          image: "/images/projects-images/hms-project-image.png"
+        },
+        {
+          id: 4,
           title: "IntellMeet — AI Enterprise Meeting Platform",
           year: "2026",
           tech: ["React 19", "Node.js", "Express", "WebRTC", "Socket.io", "MongoDB", "Redis", "OpenAI"],
@@ -111,7 +120,7 @@ export const translations = {
           image: "/images/projects-images/intellmeet-project-image.png"
         },
         {
-          id: 4,
+          id: 5,
           title: "The UX Review Blog - Neubrutalism Landing Page",
           year: "2026",
           tech: ["HTML5", "CSS3", "Flexbox", "Responsive Design", "FontAwesome"],
@@ -120,7 +129,7 @@ export const translations = {
           image: "/images/projects-images/uxreview-project-image.png"
         },
         {
-          id: 5,
+          id: 6,
           title: "DJI Mavic 4 Pro - Drone Product Landing Page",
           year: "2026",
           tech: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "FontAwesome"],
@@ -129,7 +138,7 @@ export const translations = {
           image: "/images/projects-images/droneproduct-project-image.png"
         },
         {
-          id: 6,
+          id: 7,
           title: "Mudabbir (مدبّر) - Personal Financial Dashboard",
           year: "2026",
           tech: ["HTML5", "CSS3", "CSS Grid", "Flexbox", "RTL Arabic", "3D Transforms"],
@@ -138,7 +147,7 @@ export const translations = {
           image: "/images/projects-images/muddabir-project-image.png"
         },
         {
-          id: 7,
+          id: 8,
           title: "AI Knowledge & Reasoning Engine",
           year: "2025",
           tech: ["Python", "LangChain", "FAISS", "Hugging Face", "PyTorch", "Embeddings"],
@@ -331,7 +340,7 @@ export const translations = {
           year: "2026",
           tech: ["Next.js 15", "Express.js", "TypeScript", "Prisma", "PostgreSQL (Neon)", "Vercel"],
           description: "نظام إدارة تعلم احترافي متمكن تم بناؤه بواجهة Next.js 15 وخلفية Express مع TypeScript و Prisma، ومنشور على Vercel مع قاعدة بيانات Neon PostgreSQL. يتضمن 5 أدوار مستخدمين (أدمن، أستاذ، معيد، طالب، ودعم)، دعم كامل للغتين العربية والإنجليزية، وتصميم زجاجي عصري مع تحريكات دقيقة.",
-          demoLink: "https://mariam-lms-portal-pink.vercel.app/",
+          demoLink: "https://mariam-lms-portal.vercel.app/",
           image: "/images/projects-images/lms-project-image.png"
         },
         {
@@ -345,6 +354,15 @@ export const translations = {
         },
         {
           id: 3,
+          title: "نظام كيرسينك لإدارة المستشفيات (HMS)",
+          year: "2026",
+          tech: ["React.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS", "Zustand", "Recharts", "Node.js", "Vercel"],
+          description: "نظام إداري متكامل للمستشفيات يتميز بـ 8 أدوار مستخدمين (أدمن، أطباء، تمريض، استقبال، صيدلة، مختبر، فواتير، ومرضى)، إدارة المخزون والدواء، التقارير الطبية المختبرية، نظام حجز المواعيد وتتبع الأسِرّة، وطباعة النماذج الرسمية المعاطاة بختم طبي مع لوحة تحليلات تفاعلية.",
+          demoLink: "https://mariam-hms-portal.vercel.app/",
+          image: "/images/projects-images/hms-project-image.png"
+        },
+        {
+          id: 4,
           title: "منصة IntellMeet للاجتماعات الذكية",
           year: "2026",
           tech: ["React 19", "Node.js", "Express", "WebRTC", "Socket.io", "MongoDB", "Redis", "OpenAI"],
@@ -353,7 +371,7 @@ export const translations = {
           image: "/images/projects-images/intellmeet-project-image.png"
         },
         {
-          id: 4,
+          id: 5,
           title: "مدونة The UX Review - صفحة هبوط بنمط نيوبروتاليزم",
           year: "2026",
           tech: ["HTML5", "CSS3", "Flexbox", "Responsive Design", "FontAwesome"],
@@ -362,7 +380,7 @@ export const translations = {
           image: "/images/projects-images/uxreview-project-image.png"
         },
         {
-          id: 5,
+          id: 6,
           title: "طائرة DJI Mavic 4 Pro - صفحة هبوط منتج",
           year: "2026",
           tech: ["HTML5", "CSS3", "Flexbox", "CSS Grid", "FontAwesome"],
@@ -371,7 +389,7 @@ export const translations = {
           image: "/images/projects-images/droneproduct-project-image.png"
         },
         {
-          id: 6,
+          id: 7,
           title: "نظام مدبّر (Mudabbir) - لوحة تحكم مالية شخصية",
           year: "2026",
           tech: ["HTML5", "CSS3", "CSS Grid", "Flexbox", "RTL Arabic", "3D Transforms"],
@@ -380,7 +398,7 @@ export const translations = {
           image: "/images/projects-images/muddabir-project-image.png"
         },
         {
-          id: 7,
+          id: 8,
           title: "محرك المعرفة والاستنتاج بالذكاء الاصطناعي",
           year: "2025",
           tech: ["Python", "LangChain", "FAISS", "Hugging Face", "PyTorch", "Embeddings"],
