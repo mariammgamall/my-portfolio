@@ -137,7 +137,7 @@ export default function Certifications() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeAllCertsModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
+              className="absolute inset-0 bg-slate-900/50 dark:bg-slate-950/85 backdrop-blur-sm"
             />
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -223,7 +223,7 @@ export default function Certifications() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeCertModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
+              className="absolute inset-0 bg-slate-900/50 dark:bg-slate-950/85 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
@@ -261,7 +261,7 @@ export default function Certifications() {
               </div>
 
               {/* Image / PDF Preview Container */}
-              <div className="flex-1 bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto overscroll-contain min-h-[350px]">
+              <div className="flex-1 bg-slate-100 dark:bg-slate-950 flex flex-col items-center justify-center p-3 md:p-6 overflow-auto overscroll-contain min-h-[350px]">
                 {activeCert.image ? (
                   <img 
                     src={activeCert.image} 

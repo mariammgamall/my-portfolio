@@ -185,7 +185,7 @@ export default function Projects() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeAllProjectsModal}
-              className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"
+              className="absolute inset-0 bg-slate-900/50 dark:bg-slate-950/85 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
@@ -315,7 +315,7 @@ export default function Projects() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeProjectDetails}
-              className="absolute inset-0 bg-slate-950/90 backdrop-blur-sm"
+              className="absolute inset-0 bg-slate-900/50 dark:bg-slate-950/85 backdrop-blur-sm"
             />
 
             {/* Modal Container */}
