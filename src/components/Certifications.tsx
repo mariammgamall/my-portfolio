@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaAward, FaEye, FaTimes, FaExternalLinkAlt, FaAward as FaAwardIcon } from 'react-icons/fa';
+import { FaAward, FaTimes, FaExternalLinkAlt, FaAward as FaAwardIcon, FaSearch } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Certifications() {
@@ -10,8 +10,8 @@ export default function Certifications() {
   const { t } = useLanguage();
   const certificates = t.certifications.items;
 
-  // Display only first 3 certificates on main page
-  const displayedCerts = certificates.slice(0, 3);
+  // Display first 6 certificates on main page (2 rows of 3 columns, matching screenshot)
+  const displayedCerts = certificates.slice(0, 6);
 
   const openCertModal = (cert: { title: string; image: string; pdf?: string }) => {
     setActiveCert(cert);
@@ -63,7 +63,7 @@ export default function Certifications() {
           />
         </div>
 
-        {/* Certifications Grid (3 items max) */}
+        {/* Certifications Grid (3 columns layout matching screenshot) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {displayedCerts.map((cert, idx) => (
             <motion.div
@@ -71,48 +71,60 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card p-6 md:p-8 flex flex-col h-full border-slate-200/50 dark:border-slate-800/40 relative group overflow-hidden"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              onClick={() => openCertModal(cert)}
+              className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/20 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col group cursor-pointer"
             >
-              {/* Top Row: Award badge icon */}
-              <div className="flex justify-between items-start mb-6">
-                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-900 text-accent-indigo dark:text-accent-teal border border-slate-200/40 dark:border-slate-800">
-                  <FaAward size={20} />
+              {/* Top Certificate Image Container */}
+              <div className="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800/80 overflow-hidden border-b border-slate-100 dark:border-slate-800/60 flex items-center justify-center">
+                {cert.image ? (
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center p-6 text-slate-400">
+                    <FaAward size={48} className="text-slate-300 dark:text-slate-700 mb-2" />
+                  </div>
+                )}
+
+                {/* Hover Overlay with Magnifying Glass / View Certificate button */}
+                <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-10">
+                  <div className="px-4 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-white font-bold text-xs md:text-sm shadow-xl flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <FaSearch className="text-accent-indigo dark:text-accent-teal text-xs md:text-sm" />
+                    <span>{t.certifications.viewCert}</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Title & Issuer */}
-              <h3 className="font-display font-bold text-lg md:text-xl text-slate-900 dark:text-white mb-2 leading-snug">
-                {cert.title}
-              </h3>
-              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6">
-                {cert.issuer}
-              </p>
-
-              {/* Action Buttons */}
-              <div className="flex items-center mt-auto w-full">
-                <button
-                  onClick={() => openCertModal(cert)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-slate-800 dark:text-white transition-all hover:scale-[1.01] cursor-pointer"
-                >
-                  <FaEye size={14} />
-                  {t.certifications.viewCert}
-                </button>
+              {/* Bottom Certificate Info Box */}
+              <div className="p-5 md:p-6 bg-white dark:bg-slate-900 flex-1 flex flex-col justify-center">
+                <h3 className="font-display font-bold text-base md:text-lg text-slate-900 dark:text-white mb-1.5 leading-snug line-clamp-1 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
+                  {cert.title}
+                </h3>
+                <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium line-clamp-1">
+                  {cert.issuer}
+                </p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* View All Certificates Button */}
-        <div className="mt-16 text-center">
-          <button
-            onClick={openAllCertsModal}
-            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal hover:opacity-95 text-white shadow-xl hover:shadow-accent-indigo/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base cursor-pointer"
-          >
-            <FaAwardIcon size={16} />
-            <span>{t.certifications.viewAll}</span>
-          </button>
-        </div>
+        {/* View All Certificates Button if more certificates exist */}
+        {certificates.length > 6 && (
+          <div className="mt-16 text-center">
+            <button
+              onClick={openAllCertsModal}
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-teal hover:opacity-95 text-white shadow-xl hover:shadow-accent-indigo/20 hover:scale-105 active:scale-95 transition-all text-sm md:text-base cursor-pointer"
+            >
+              <FaAwardIcon size={16} />
+              <span>{t.certifications.viewAll}</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* All Certificates Page Modal (z-[100] above fixed navbar) */}
@@ -158,24 +170,39 @@ export default function Certifications() {
                   {certificates.map((cert, idx) => (
                     <div
                       key={idx}
-                      className="glass-card p-6 flex flex-col h-full border-slate-200/50 dark:border-slate-800/40 relative bg-white dark:bg-slate-900"
+                      onClick={() => openCertModal(cert)}
+                      className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/20 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col group cursor-pointer"
                     >
-                      <div className="p-3 w-fit rounded-xl bg-slate-100 dark:bg-slate-800 text-accent-indigo dark:text-accent-teal mb-4">
-                        <FaAward size={18} />
+                      <div className="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800/80 overflow-hidden border-b border-slate-100 dark:border-slate-800/60 flex items-center justify-center">
+                        {cert.image ? (
+                          <img
+                            src={cert.image}
+                            alt={cert.title}
+                            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
+                            draggable="false"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="flex flex-col items-center justify-center p-6 text-slate-400">
+                            <FaAward size={48} className="text-slate-300 dark:text-slate-700 mb-2" />
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 z-10">
+                          <div className="px-4 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 text-slate-900 dark:text-white font-bold text-xs md:text-sm shadow-xl flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <FaSearch className="text-accent-indigo dark:text-accent-teal text-xs md:text-sm" />
+                            <span>{t.certifications.viewCert}</span>
+                          </div>
+                        </div>
                       </div>
-                      <h4 className="font-display font-bold text-base md:text-lg text-slate-900 dark:text-white mb-1">
-                        {cert.title}
-                      </h4>
-                      <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-6">
-                        {cert.issuer}
-                      </p>
-                      <button
-                        onClick={() => openCertModal(cert)}
-                        className="mt-auto w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white transition-all cursor-pointer"
-                      >
-                        <FaEye size={14} />
-                        {t.certifications.viewCert}
-                      </button>
+
+                      <div className="p-5 md:p-6 bg-white dark:bg-slate-900 flex-1 flex flex-col justify-center">
+                        <h4 className="font-display font-bold text-base md:text-lg text-slate-900 dark:text-white mb-1.5 leading-snug line-clamp-1 group-hover:text-accent-indigo dark:group-hover:text-accent-teal transition-colors">
+                          {cert.title}
+                        </h4>
+                        <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium line-clamp-1">
+                          {cert.issuer}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
