@@ -2,6 +2,8 @@
 
 A modern, professional, and visually striking personal portfolio website for **Mariam Gamal**, a Computer Science Engineering student, **Software Engineer & AI Developer**. Built using a sleek dark/light tech aesthetic, featuring glassmorphism layouts, full Arabic/English bilingual support (RTL/LTR), performant micro-animations, and direct live contact form integration.
 
+![Mariam Gamal Portfolio Hero Section](./public/images/readme-images/portfolio-hero-section.png)
+
 ---
 
 ## 🚀 Live Demo & Repository
@@ -119,7 +121,8 @@ mariam-gamal-portfolio/
 │   ├── certificates/           # PNG & PDF Certification files
 │   ├── images/                 
 │   │   ├── profile-image/      # Profile headshot (mariam.jpeg)
-│   │   └── projects-images/    # Screenshots for LMS, COS, and Smart-RAG
+│   │   ├── projects-images/    # Screenshots for LMS, COS, and Smart-RAG
+│   │   └── readme-images/      # Preview hero section screenshot (portfolio-hero-section.png)
 │   ├── my resume/              # Personal curriculum vitae (mariam_gamal_cv.pdf)
 │   ├── favicon.svg             # Tab browser icon
 │   └── icons.svg               # SVG sprite mappings
