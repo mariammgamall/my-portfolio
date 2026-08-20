@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaTimes, FaLayerGroup, FaInfoCircle } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
@@ -35,10 +35,12 @@ export default function Projects() {
     { id: 'aiml', label: 'AI/ML' },
   ];
 
-  const modalFilteredProjects = projects.filter((project) => {
-    if (activeCategory === 'all') return true;
-    return project.categories?.includes(activeCategory);
-  });
+  const modalFilteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      if (activeCategory === 'all') return true;
+      return project.categories?.includes(activeCategory);
+    });
+  }, [projects, activeCategory]);
 
   useEffect(() => {
     return () => {
@@ -246,18 +248,20 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[300px]">
-                  <AnimatePresence mode="popLayout">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeCategory}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[300px]"
+                  >
                     {modalFilteredProjects.map((project) => (
-                      <motion.div
+                      <div
                         key={project.id}
-                        layout
-                        initial={{ opacity: 0, scale: 0.92, y: 15 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.92, y: -15 }}
-                        transition={{ duration: 0.3, ease: 'easeOut' }}
                         onClick={() => openProjectDetails(project)}
-                        className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer"
+                        className="glass-card flex flex-col h-full border-slate-200 dark:border-slate-800/40 overflow-hidden group shadow-md hover:shadow-xl hover:shadow-accent-indigo/10 transition-all duration-300 bg-white dark:bg-slate-900 cursor-pointer transform-gpu"
                       >
                         <div className="w-full h-48 sm:h-52 relative overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
                           <img 
@@ -265,6 +269,7 @@ export default function Projects() {
                             alt={project.title} 
                             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 select-none"
                             draggable="false"
+                            loading="lazy"
                           />
                         </div>
                         <div className="p-5 md:p-6 flex flex-col flex-1">
@@ -294,10 +299,10 @@ export default function Projects() {
                             </span>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
-                  </AnimatePresence>
-                </motion.div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </motion.div>
           </div>
