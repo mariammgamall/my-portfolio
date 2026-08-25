@@ -160,6 +160,16 @@ export const translations = {
           image: "/images/projects-images/muddabir-project-image.png"
         },
         {
+          id: 10,
+          title: "GameArena — Ultimate Gaming & eSports Landing Page",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "Google Fonts"],
+          description: "High-performance, dark-themed eSports and gaming landing page built with HTML5, CSS3 keyframe animations, Bootstrap 5 grid layout, and zero-JS interactive CSS components. Features a 3-page 9-game slider driven by CSS radio inputs, a slide-out mobile drawer, dual opposite infinite sponsor marquees, and grayscale-to-neon team member hover transitions.",
+          demoLink: "https://games-arena-landing-page.vercel.app/",
+          image: "/images/projects-images/gamearena-project-image.png"
+        },
+        {
           id: 9,
           title: "Golden Clutch Chicken — Sports Themed Fried Chicken Web page",
           year: "2026",
@@ -432,6 +442,16 @@ export const translations = {
           description: "لوحة تحكم لإدارة المالية الشخصية تساعد في تتبع المصروفات، مراقبة الميزانيات، تحليل الدخل مقابل المصروفات، وإدارة الفواتير الشهرية. تم بناؤها باستخدام HTML5 و CSS3 الصافي مع دعم كامل للغة العربية وتأثيرات 3D تفاعلية.",
           demoLink: "https://mariam-mudabbir-financial-dashboard.vercel.app/",
           image: "/images/projects-images/muddabir-project-image.png"
+        },
+        {
+          id: 10,
+          title: "منصة GameArena — صفحة هبوط ألعاب الفيديو والرياضات الإلكترونية",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "Google Fonts"],
+          description: "صفحة هبوط فاخرة بطابع داكن لألعاب الفيديو والرياضات الإلكترونية تم بناؤها باستخدام HTML5 وتحريكات CSS3 وشبكة Bootstrap 5 ومكونات تفاعلية نقيّة بدون JavaScript. تتضمن معرض ألعاب مقسّم على 3 صفحات يعمل بأزرار CSS الراديو، شريط تنقل جانبي متجاوب للموبايل، شريط شركاء متصل يدور في اتجاهين متعاكسين، وبطاقات أعضاء الفريق بتأثير تحول من الرمادي إلى النيون عند التمرير.",
+          demoLink: "https://games-arena-landing-page.vercel.app/",
+          image: "/images/projects-images/gamearena-project-image.png"
         },
         {
           id: 9,
