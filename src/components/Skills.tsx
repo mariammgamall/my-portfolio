@@ -42,7 +42,7 @@ export default function Skills() {
     {
       title: t.skills.categories.tools,
       icon: <FaTools className="text-amber-500 dark:text-amber-400" size={24} />,
-      skills: ['Git', 'GitHub', 'VS Code', 'REST API Design', 'Vercel', 'Data Entry', 'Data Management', 'Microsoft Word', 'Microsoft Excel', 'Microsoft PowerPoint']
+      skills: ['Git', 'GitHub', 'VS Code', 'REST API Design', 'Vercel', 'Data Entry', 'Data Management', 'Microsoft Office Suite']
     }
   ];
 
