@@ -170,6 +170,36 @@ export const translations = {
           image: "/images/projects-images/gamearena-project-image.png"
         },
         {
+          id: 11,
+          title: "EliteHomes — Real Estate Landing Page",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "Google Fonts"],
+          description: "High-precision, responsive real estate landing page built with HTML5, CSS3, Bootstrap 5, and Font Awesome. Features a search console with multi-parameter filters, Bootstrap 5 scrollspy, properties mega menu dropdown, interactive tabbed services system, auto-playing testimonials carousel, collapsible FAQ accordions, contact cards, and responsive layouts.",
+          demoLink: "https://elite-homes-landing-page.vercel.app/",
+          image: "/images/projects-images/elitehomes-project-image.png"
+        },
+        {
+          id: 12,
+          title: "What's For Dinner - Daily Meal Inspiration App",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "JavaScript (ES6+)"],
+          description: "Modern, responsive web application that generates random dinner recipes without immediate repeats. Features prep time overlay card, extended prep notice (>45 mins alert), interactive tab system (Ingredients, Instructions, Nutrition grid, Chef's Tips), and mobile collapsible navigation.",
+          demoLink: "https://what-is-for-dinnerr.vercel.app/",
+          image: "/images/projects-images/whatisfordinner-project-image.png"
+        },
+        {
+          id: 13,
+          title: "ContactHub — Smart Contact Manager",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "SweetAlert2", "JavaScript (ES6+)", "LocalStorage"],
+          description: "Responsive contact management application with full CRUD functionality, real-time search filtering, favorite & emergency contact badges, direct tel: and mailto: links, strict input form validation (Egyptian phone numbers, email, name), SweetAlert2 delete alerts, and LocalStorage data persistence.",
+          demoLink: "https://smart-contact-managerr.vercel.app/",
+          image: "/images/projects-images/smartcontactmanager-project-image.png"
+        },
+        {
           id: 9,
           title: "Golden Clutch Chicken — Sports Themed Fried Chicken Web page",
           year: "2026",
@@ -452,6 +482,36 @@ export const translations = {
           description: "صفحة هبوط فاخرة بطابع داكن لألعاب الفيديو والرياضات الإلكترونية تم بناؤها باستخدام HTML5 وتحريكات CSS3 وشبكة Bootstrap 5 ومكونات تفاعلية نقيّة بدون JavaScript. تتضمن معرض ألعاب مقسّم على 3 صفحات يعمل بأزرار CSS الراديو، شريط تنقل جانبي متجاوب للموبايل، شريط شركاء متصل يدور في اتجاهين متعاكسين، وبطاقات أعضاء الفريق بتأثير تحول من الرمادي إلى النيون عند التمرير.",
           demoLink: "https://games-arena-landing-page.vercel.app/",
           image: "/images/projects-images/gamearena-project-image.png"
+        },
+        {
+          id: 11,
+          title: "منصة EliteHomes — صفحة هبوط عقارية فاخرة",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "Google Fonts"],
+          description: "صفحة هبوط عقارية عالية الدقة ومتجاوبة تم بناؤها باستخدام HTML5 و CSS3 و Bootstrap 5 و Font Awesome. تتميز بوحدة بحث متعددة الخيارات، شريط تنقل بنظام Scrollspy، قائمة منسدلة عملاقة (Mega Menu) للعقارات، نظام خدمات تفاعلي بالمبوبة، معرض آراء عملاء يدور تلقائياً، أسئلة شائعة قابلة للطي، وتصاميم متجاوبة.",
+          demoLink: "https://elite-homes-landing-page.vercel.app/",
+          image: "/images/projects-images/elitehomes-project-image.png"
+        },
+        {
+          id: 12,
+          title: "تطبيق What's For Dinner - ملهم الوجبات اليومية",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "Font Awesome 6", "JavaScript (ES6+)"],
+          description: "تطبيق ويب متجاوب يولد وصفات عشاء عشوائية بدون تكرار الطبق مرتين متتاليتين. يتميز ببطاقة زمنية عائمة، تنبيه تلقائي للوصفات التي تتطلب أكثر من 45 دقيقة، نظام تبويبات تفاعلي (المكونات، خطوات التحضير، القيم الغذائية، ونصائح الشيف)، وتنسيق متجاوب.",
+          demoLink: "https://what-is-for-dinnerr.vercel.app/",
+          image: "/images/projects-images/whatisfordinner-project-image.png"
+        },
+        {
+          id: 13,
+          title: "تطبيق ContactHub — مدير جهات الاتصال الذكي",
+          year: "2026",
+          categories: ["frontend"],
+          tech: ["HTML5", "CSS3", "Bootstrap 5", "SweetAlert2", "JavaScript (ES6+)", "LocalStorage"],
+          description: "تطبيق إدارة جهات اتصال حديث ومتجاوب يوفر عمليات CRUD كاملة، بحث فوري في الوقت الفعلي، تمييز جهات الاتصال المفضلة والطوارئ، روابط اتصال مباشر، التحقق من المدخلات (أرقام الهواتف المصرية والبريد الإلكتروني)، تنبيهات تأكيد الحذف بـ SweetAlert2، وحفظ البيانات في LocalStorage.",
+          demoLink: "https://smart-contact-managerr.vercel.app/",
+          image: "/images/projects-images/smartcontactmanager-project-image.png"
         },
         {
           id: 9,
