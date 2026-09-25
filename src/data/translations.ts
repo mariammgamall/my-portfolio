@@ -17,7 +17,7 @@ export const translations = {
       greeting: "Hi, I'm",
       name: "Mariam Gamal",
       title: "Software Engineer & AI Developer",
-      taglines: ["Computer Science Engineer", "Full Stack Developer", "Mobile App Developer"],
+      taglines: ["Computer Engineer", "Web Developer", "Mobile App Developer", "Graphic Designer"],
       bio: "Building scalable web applications, cross platform mobile apps, and AI powered solutions with a passion for clean architecture, performance optimization, and continuous learning.",
       btnProjects: "View Projects",
       btnResume: "View Resume",
@@ -26,7 +26,7 @@ export const translations = {
     about: {
       title: "About Me",
       heading: "Aspiring Software Engineer & AI Developer",
-      p1: "I am a Computer Science Engineering student passionate about Software Engineering, Artificial Intelligence, Full Stack Web Development, Mobile Application Development, and UI/UX Design. I enjoy transforming ideas into scalable, user focused digital solutions by combining modern technologies with strong engineering principles.",
+      p1: "I am a Computer Engineer passionate about Software Engineering, Artificial Intelligence, Web Development, Mobile Application Development, Graphic Design and UI/UX Design. I enjoy transforming ideas into scalable, user focused digital solutions by combining modern technologies with strong engineering principles.",
       p2: "My experience includes developing responsive web and mobile applications, designing backend architectures, building RESTful APIs, working with databases, and implementing AI powered solutions such as Retrieval Augmented Generation (RAG) systems. I continuously explore machine learning and modern software technologies to solve real world problems.",
       p3: "I am committed to writing clean, maintainable, and efficient code while following best practices in software architecture and system design. Through continuous learning, collaboration, and hands on projects, I strive to build high quality applications that deliver excellent performance, scalability, and user experience.",
       stat1Label: "E-JUST Study",
@@ -227,7 +227,7 @@ export const translations = {
         {
           title: "Software Testing",
           company: "Information Technology Institute (ITI)",
-          period: "Aug 2026 - Present",
+          period: "Aug 2026 - Sep 2026",
           desc: "Conducting comprehensive software testing procedures to ensure application quality and functionality across multiple projects & Collaborating with development teams to identify and resolve defects throughout the software development lifecycle, implementing automated testing solutions."
         },
         {
@@ -247,6 +247,12 @@ export const translations = {
           company: "Decode Labs Company",
           period: "Jun 1 – Jul 1, 2026",
           desc: "Worked on applied AI projects during a one month internship, strengthening practical skills in AI development and implementation."
+        },
+        {
+          title: "Web Development Training Program",
+          company: "Zidio Development Company",
+          period: "May 2026 - Jul 2026",
+          desc: "Participated in an intensive web development training program, building and deploying full-stack applications using modern frameworks and best practices & Collaborated on real world projects to enhance practical skills in frontend and backend development, API integration, and responsive design."
         },
         {
           title: "Generative AI Internship Program",
@@ -311,7 +317,7 @@ export const translations = {
     footer: {
       logoTitle: "Mariam",
       logoTitle2: "Gamal",
-      sub: "Computer Science Engineer specializing in Full Stack Web Development, Mobile Applications & AI.",
+      sub: "Computer Engineer specializing in Web Development, Mobile Applications, Graphic Designs & AI.",
       rights: "All rights reserved.",
       top: "Back to Top ↑"
     }
@@ -334,7 +340,7 @@ export const translations = {
       greeting: "أهلاً، أنا",
       name: "مريم جمال",
       title: "مهندسة برمجيات ومطورة ذكاء اصطناعي",
-      taglines: ["مهندسة علوم حاسب", "مطورة فول ستاك", "مطورة تطبيقات موبايل"],
+      taglines: ["مهندسة حاسب", "مطورة ويب", "مطورة تطبيقات موبايل", "مصممة جرافيك"],
       bio: "بناء تطبيقات ويب قابلة للتوسع، تطبيقات موبايل متعددة المنصات، وحلول مدعومة بالذكاء الاصطناعي مع شغف بالمعمارية النظيفة، تحسين الأداء، والتعلم المستمر.",
       btnProjects: "عرض المشاريع",
       btnResume: "السيرة الذاتية",
@@ -343,7 +349,7 @@ export const translations = {
     about: {
       title: "نبذة عني",
       heading: "مهندسة برمجيات ومطورة ذكاء اصطناعي طموحة",
-      p1: "أنا طالبة في قسم هندسة وعلوم الحاسب بشغف كبير في هندسة البرمجيات، الذكاء الاصطناعي، تطوير الويب المتكامل (Full Stack)، تطوير تطبيقات الموبايل، وتصميم واجهات وتجربة المستخدم (UI/UX). أستمتع بتحويل الأفكار إلى حلول رقمية قابلة للتوسع ومتمحورة حول المستخدم من خلال دمج التقنيات الحديثة مع المبادئ الهندسية القوية.",
+      p1: "أنا مهندسة حاسب بشغف كبير في هندسة البرمجيات، الذكاء الاصطناعي، تطوير الويب، تطوير تطبيقات الموبايل، التصميم الجرافيكي، وتصميم واجهات وتجربة المستخدم (UI/UX). أستمتع بتحويل الأفكار إلى حلول رقمية قابلة للتوسع ومتمحورة حول المستخدم من خلال دمج التقنيات الحديثة مع المبادئ الهندسية القوية.",
       p2: "تتضمن خبرتي تطوير تطبيقات الويب والموبايل المتجاوبة، تصميم البنيات التحتية الخلفية، بناء واجهات برمجة التطبيقات (RESTful APIs)، العمل مع قواعد البيانات، وتنفيذ الحلول المدعومة بالذكاء الاصطناعي مثل أنظمة RAG. أستمر دائماً في استكشاف التعلم الآلي وتقنيات البرمجيات الحديثة لحل المشكلات الواقعية.",
       p3: "أنا ملتزمة بكتابة كود نظيف، قابل للصيانة، وفعال مع اتباع أفضل الممارسات في معمارية البرمجيات وتصميم الأنظمة. من خلال التعلم المستمر، التعاون، والمشاريع التطبيقية، أسعى لبناء تطبيقات عالية الجودة تقدم أداءً ممتازاً، وسلاسة، وتجربة مستخدم متميزة.",
       stat1Label: "سنوات دراسة الجامعة",
@@ -544,7 +550,7 @@ export const translations = {
         {
           title: "اختبار البرمجيات (Software Testing)",
           company: "معهد تكنولوجيا المعلومات (ITI)",
-          period: "أغسطس 2026 - الحالي",
+          period: "أغسطس 2026 - سبتمبر 2026",
           desc: "إجراء اختبارات شاملة للبرمجيات لضمان جودة التطبيقات ووظائفها عبر مشاريع متعددة، والتعاون مع فرق التطوير لتحديد العيوب وإصلاحها طوال دورة حياة تطوير البرمجيات وتنفيذ حلول الاختبار الآلي."
         },
         {
@@ -564,6 +570,12 @@ export const translations = {
           company: "شركة ديكود لابس (Decode Labs)",
           period: "1 يونيو – 1 يوليو 2026",
           desc: "العمل على مشاريع ذكاء اصطناعي تطبيقية خلال تدريب لمدة شهر، وتعزيز المهارات العملية في تطوير وتنفيذ حلول الذكاء الاصطناعي."
+        },
+        {
+          title: "برنامج تدريب تطوير الويب (Web Development Training Program)",
+          company: "شركة زيديو للتطوير (Zidio Development Company)",
+          period: "مايو 2026 - يوليو 2026",
+          desc: "المشاركة في برنامج تدريبي مكثف في تطوير الويب، وبناء ونشر تطبيقات فول ستاك باستخدام أحدث أطر العمل وأفضل الممارسات، والتعاون في مشاريع واقعية لتعزيز المهارات العملية في التطوير الأمامي والخلفي وتكامل واجهات البرمجة (APIs) والتصميم المتجاوب."
         },
         {
           title: "برنامج تدريب الذكاء الاصطناعي التوليدي (Generative AI Internship Program)",
@@ -628,7 +640,7 @@ export const translations = {
     footer: {
       logoTitle: "مريم",
       logoTitle2: "جمال",
-      sub: "مهندسة علوم حاسب متخصصة في تطوير الويب المتكامل والذكاء الاصطناعي التطبيقي.",
+      sub: "مهندسة حاسب متخصصة في تطوير الويب، تطبيقات الموبايل، التصميم الجرافيكي والذكاء الاصطناعي.",
       rights: "جميع الحقوق محفوظة.",
       top: "العودة للأعلى ↑"
     }
