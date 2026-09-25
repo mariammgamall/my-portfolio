@@ -275,6 +275,9 @@ export const translations = {
       viewCert: "View Certificate",
       close: "Close",
       items: [
+        { title: "Zidio Web Development Training Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Training-Completion-Certificate.png" },
+        { title: "Zidio Web Development Experience Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Experience-Certificate.png" },
+        { title: "Zidio Web Development Internship Completion Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Internship-Completion-Certificate.png" },
         { title: "ITI Software Testing Certificate (ISTQB Foundation Level V4.0)", issuer: "ITI MaharaTech", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png" },
         { title: "Syntecx Hub UI/UX Design Internship Certificate", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png" },
         { title: "Decode Labs AI Internship Certificate", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png" },
@@ -589,6 +592,9 @@ export const translations = {
       viewCert: "عرض الشهادة",
       close: "إغلاق",
       items: [
+        { title: "شهادة التدريب على تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Training-Completion-Certificate.png" },
+        { title: "شهادة خبرة تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Experience-Certificate.png" },
+        { title: "شهادة إتمام التدريب الميداني في تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Internship-Completion-Certificate.png" },
         { title: "شهادة اختبار البرمجيات من ITI (مستوى ISTQB الأساسي V4.0)", issuer: "معهد تكنولوجيا المعلومات ITI - مهارة تك", image: "/certificates/ITI - Software Testing Mahara Tech Certificate.png" },
         { title: "شهادة تدريب UI/UX Design", issuer: "SyntecxHub", image: "/certificates/Syntecx Hub UIUX Design Internship Certificate.png" },
         { title: "شهادة تدريب Decode Labs بالذكاء الاصطناعي", issuer: "Decode Labs", image: "/certificates/DecodeLabs Internship Certificate.png" },
