@@ -281,6 +281,7 @@ export const translations = {
       viewCert: "View Certificate",
       close: "Close",
       items: [
+        { title: "InnovEgypt Training & Entrepreneurship Certificate", issuer: "ITIDA / TIEC", image: "/certificates/Certificate InnovEgypt - Mariam Gamal Elsayed.png" },
         { title: "Zidio Web Development Training Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Training-Completion-Certificate.png" },
         { title: "Zidio Web Development Experience Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Experience-Certificate.png" },
         { title: "Zidio Web Development Internship Completion Certificate", issuer: "Zidio Development", image: "/certificates/Zidio-Internship-Completion-Certificate.png" },
@@ -604,6 +605,7 @@ export const translations = {
       viewCert: "عرض الشهادة",
       close: "إغلاق",
       items: [
+        { title: "شهادة برنامج إبتكار مصر (InnovEgypt)", issuer: "ITIDA / TIEC", image: "/certificates/Certificate InnovEgypt - Mariam Gamal Elsayed.png" },
         { title: "شهادة التدريب على تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Training-Completion-Certificate.png" },
         { title: "شهادة خبرة تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Experience-Certificate.png" },
         { title: "شهادة إتمام التدريب الميداني في تطوير الويب من Zidio", issuer: "Zidio Development", image: "/certificates/Zidio-Internship-Completion-Certificate.png" },
